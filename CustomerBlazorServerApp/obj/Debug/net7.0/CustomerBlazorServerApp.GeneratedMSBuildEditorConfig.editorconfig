@@ -9,55 +9,55 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = CustomerBlazorServerApp
 build_property.RootNamespace = CustomerBlazorServerApp
-build_property.ProjectDir = C:\Users\Satheesh\source\repos\CustomerBlazorApplication\CustomerBlazorServerApp\
+build_property.ProjectDir = c:\Users\Satheesh\source\repos\Blazor\CustomerBlazorServerApp\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 7.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\Satheesh\source\repos\CustomerBlazorApplication\CustomerBlazorServerApp
+build_property.MSBuildProjectDirectory = c:\Users\Satheesh\source\repos\Blazor\CustomerBlazorServerApp
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/Satheesh/source/repos/CustomerBlazorApplication/CustomerBlazorServerApp/App.razor]
+[c:/Users/Satheesh/source/repos/Blazor/CustomerBlazorServerApp/App.razor]
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Satheesh/source/repos/CustomerBlazorApplication/CustomerBlazorServerApp/Pages/Counter.razor]
+[c:/Users/Satheesh/source/repos/Blazor/CustomerBlazorServerApp/Pages/Counter.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ291bnRlci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Satheesh/source/repos/CustomerBlazorApplication/CustomerBlazorServerApp/Pages/CustomerList.razor]
+[c:/Users/Satheesh/source/repos/Blazor/CustomerBlazorServerApp/Pages/CustomerList.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ3VzdG9tZXJMaXN0LnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Satheesh/source/repos/CustomerBlazorApplication/CustomerBlazorServerApp/Pages/FetchData.razor]
+[c:/Users/Satheesh/source/repos/Blazor/CustomerBlazorServerApp/Pages/FetchData.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRmV0Y2hEYXRhLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Satheesh/source/repos/CustomerBlazorApplication/CustomerBlazorServerApp/Pages/Index.razor]
+[c:/Users/Satheesh/source/repos/Blazor/CustomerBlazorServerApp/Pages/Index.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Satheesh/source/repos/CustomerBlazorApplication/CustomerBlazorServerApp/Shared/SurveyPrompt.razor]
+[c:/Users/Satheesh/source/repos/Blazor/CustomerBlazorServerApp/Shared/SurveyPrompt.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFN1cnZleVByb21wdC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Satheesh/source/repos/CustomerBlazorApplication/CustomerBlazorServerApp/_Imports.razor]
+[c:/Users/Satheesh/source/repos/Blazor/CustomerBlazorServerApp/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Satheesh/source/repos/CustomerBlazorApplication/CustomerBlazorServerApp/Shared/MainLayout.razor]
+[c:/Users/Satheesh/source/repos/Blazor/CustomerBlazorServerApp/Shared/MainLayout.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-rhoqtoexyf
 
-[C:/Users/Satheesh/source/repos/CustomerBlazorApplication/CustomerBlazorServerApp/Shared/NavMenu.razor]
+[c:/Users/Satheesh/source/repos/Blazor/CustomerBlazorServerApp/Shared/NavMenu.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE5hdk1lbnUucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-jf8kothqjw
 
-[C:/Users/Satheesh/source/repos/CustomerBlazorApplication/CustomerBlazorServerApp/Pages/Error.cshtml]
+[c:/Users/Satheesh/source/repos/Blazor/CustomerBlazorServerApp/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Satheesh/source/repos/CustomerBlazorApplication/CustomerBlazorServerApp/Pages/_Host.cshtml]
+[c:/Users/Satheesh/source/repos/Blazor/CustomerBlazorServerApp/Pages/_Host.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX0hvc3QuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
