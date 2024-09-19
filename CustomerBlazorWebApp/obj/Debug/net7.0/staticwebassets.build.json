@@ -1,0 +1,39 @@
+{
+  "Version": 1,
+  "Hash": "xxSX5XnJXsLFwjPV/29C/jcAiF+MdFOCCe4cceMGAmE=",
+  "Source": "CustomerBlazorWebApp",
+  "BasePath": "_content/CustomerBlazorWebApp",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "CustomerBlazorWebApp\\wwwroot",
+      "Source": "CustomerBlazorWebApp",
+      "ContentRoot": "C:\\Users\\Satheesh\\source\\repos\\CustomerBlazorApplication\\CustomerBlazorWebApp\\wwwroot\\",
+      "BasePath": "_content/CustomerBlazorWebApp",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\Satheesh\\source\\repos\\CustomerBlazorApplication\\CustomerBlazorWebApp\\wwwroot\\css\\site.css",
+      "SourceId": "CustomerBlazorWebApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Satheesh\\source\\repos\\CustomerBlazorApplication\\CustomerBlazorWebApp\\wwwroot\\",
+      "BasePath": "_content/CustomerBlazorWebApp",
+      "RelativePath": "css/site.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\site.css"
+    }
+  ]
+}

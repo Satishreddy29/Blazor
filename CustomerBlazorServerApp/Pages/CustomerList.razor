@@ -1,0 +1,50 @@
+﻿@page "/customerlist"
+@using CustomerBlazorServerApp.Data
+@using CustomerBlazorServerApp.Services;
+@inject CustomerService customerService;
+
+<PageTitle>Customer Order List</PageTitle>
+
+<h1>Customer Details</h1>
+
+<p>This component demonstrates fetching data from a service.</p>
+
+@if (co?.customers == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Address</th>
+                <th>Phone</th>
+                <th>Order Count</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var customer in co.customers)
+            {
+                <tr>
+                    <td>@customer.Id</td>
+                    <td>@customer.Name</td>
+                    <td>@customer.Address</td>
+                    <td>@customer.Phone</td>
+                    <td>@co?.orders.Count</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    private CustomerOrder co;
+
+    protected override async Task OnInitializedAsync()
+    {
+        co = (await customerService.GetAllCustomerData());
+    }
+}

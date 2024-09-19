@@ -1,0 +1,22 @@
+[
+  {
+    "ContainingType": "TrackingAPI.Controllers.TrackingController",
+    "Method": "GetCustomerOrders",
+    "RelativePath": "api/Tracking",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "TrackingApi.Model.Tracking",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  }
+]

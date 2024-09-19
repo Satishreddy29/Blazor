@@ -1,0 +1,26 @@
+[
+  {
+    "Id": 1,
+    "Name": "Bill Edwards",
+    "Address": "2345 Washington drive New Jeresy 4553",
+    "Phone": "123-234-4567"
+  },
+  {
+    "Id": 2,
+    "Name": "John Paul",
+    "Address": "4324 Beach rd Tampa Florida 90082",
+    "Phone": "111-234-4567"
+  },
+  {
+    "Id": 3,
+    "Name": "Craig Smitman",
+    "Address": "8224 Loundoun drive Herndon Virginia 20171",
+    "Phone": "222-234-4567"
+  },
+  {
+    "Id": 4,
+    "Name": "Daren Patterson",
+    "Address": "72343 Woodland Center Blvd Brooklyn New York 87002",
+    "Phone": "444-234-3424"
+  }
+]
