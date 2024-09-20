@@ -21,6 +21,11 @@ namespace CustomerBlazorServerApp.Services
             return custresult;
 
         }
+        public async Task AddCustomerAsync(Customer customer)
+        {
+            var response = await httpClient.PostAsJsonAsync("https://localhost:7190/api/Tracking", customer);
+            response.EnsureSuccessStatusCode(); // Ensure the request was successful
+        }
 
     }
    

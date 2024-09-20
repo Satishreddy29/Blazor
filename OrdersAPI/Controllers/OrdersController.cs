@@ -1,7 +1,8 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using OrderAPI.Models;
+using Microsoft.EntityFrameworkCore;
 using OrdersAPI.Helpers;
+using OrdersAPI.Models;
 
 namespace OrdersAPI.Controllers
 {
@@ -9,73 +10,112 @@ namespace OrdersAPI.Controllers
     [ApiController]
     public class OrdersController : ControllerBase
     {
-        [HttpGet]
-        public ActionResult<List<Order>> GetOrders()
+        private readonly OrderContext _context;
+
+        public OrdersController(OrderContext context)
         {
-            try
-            {
-                return OrderJsonHelper.ReadFromJsonFile<Order>();
-            }
-            catch (Exception ex)
-            {
-                return StatusCode(500, ex.Message);
-            }
+            _context = context;
+
+            _context.Database.EnsureCreated();
         }
-        [HttpGet("{id}")]
-        public ActionResult<Order> GetOrder(int id)
+
+        [HttpGet]
+        public async Task<ActionResult> GetAllProducts()
         {
-            var people = OrderJsonHelper.ReadFromJsonFile<Order>();
-            var Order = people.FirstOrDefault(p => p.Id == id);
-            if (Order == null)
+            return Ok(await _context.Products.ToArrayAsync());
+        }
+
+        [HttpGet("{id}")]
+        public async Task<ActionResult> GetProduct(int id)
+        {
+            var product = await _context.Products.FindAsync(id);
+            if (product == null)
             {
                 return NotFound();
             }
-            return Order;
+            return Ok(product);
         }
 
         [HttpPost]
-        public ActionResult<Order> CreateOrder([FromBody] Order newOrder)
+        public async Task<ActionResult<Product>> PostProduct(Product product)
         {
-            var people = OrderJsonHelper.ReadFromJsonFile<Order>();
-            people.Add(newOrder);
-            OrderJsonHelper.WriteToJsonFile(people);
-            return CreatedAtAction(nameof(GetOrder), new { id = newOrder.Id }, newOrder);
+            if (!ModelState.IsValid) {
+                return BadRequest();
+            }
+            _context.Products.Add(product);
+            await _context.SaveChangesAsync();
+
+            return CreatedAtAction(
+                "GetProduct",
+                new { id = product.Id },
+                product);
         }
 
         [HttpPut("{id}")]
-        public ActionResult UpdateOrder(int id, [FromBody] Order updatedOrder)
+        public async Task<ActionResult> PutProduct(int id, Product product)
         {
-            var people = OrderJsonHelper.ReadFromJsonFile<Order>();
-            var Order = people.FirstOrDefault(p => p.Id == id);
-
-            if (Order == null)
+            if (id != product.Id)
             {
-                return NotFound();
+                return BadRequest();
             }
 
-            Order.Name = updatedOrder.Name;
-            Order.Email = updatedOrder.Email;
-            Order.Phone = updatedOrder.Phone;
-            OrderJsonHelper.WriteToJsonFile(people);
+            _context.Entry(product).State = EntityState.Modified;
+
+            try
+            {
+                await _context.SaveChangesAsync();
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                if (!_context.Products.Any(p => p.Id == id))
+                {
+                    return NotFound();
+                } 
+                else
+                {
+                    throw;
+                }
+            }
 
             return NoContent();
         }
 
         [HttpDelete("{id}")]
-        public ActionResult DeleteOrder(int id)
+        public async Task<ActionResult<Product>> DeleteProduct(int id)
         {
-            var people = OrderJsonHelper.ReadFromJsonFile<Order>();
-            var Order = people.FirstOrDefault(p => p.Id == id);
-
-            if (Order == null)
+            var product = await _context.Products.FindAsync(id);
+            if (product == null)
             {
                 return NotFound();
             }
 
-            people.Remove(Order);
-            OrderJsonHelper.WriteToJsonFile(people);
+            _context.Products.Remove(product);
+            await _context.SaveChangesAsync();
 
-            return NoContent();
+            return product;
+        }
+
+        [HttpPost]
+        [Route("Delete")]
+        public async Task<ActionResult> DeleteMultiple([FromQuery]int[] ids)
+        {
+            var products = new List<Product>();
+            foreach (var id in ids)
+            {
+                var product = await _context.Products.FindAsync(id);
+
+                if (product == null)
+                {
+                    return NotFound();
+                }
+
+                products.Add(product);
+            }
+
+            _context.Products.RemoveRange(products);
+            await _context.SaveChangesAsync();
+
+            return Ok(products);
         }
     }
 }

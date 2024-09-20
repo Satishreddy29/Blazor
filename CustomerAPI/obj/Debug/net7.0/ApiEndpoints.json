@@ -1,34 +1,24 @@
 [
   {
     "ContainingType": "CustomerAPI.Controllers.CustomerController",
-    "Method": "GetCustomers",
+    "Method": "GetAllCustomers",
     "RelativePath": "api/Customer",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [],
-    "ReturnTypes": [
-      {
-        "Type": "System.Collections.Generic.List\u00601[[CustomerAPI.Models.Customer, CustomerAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
+    "ReturnTypes": []
   },
   {
     "ContainingType": "CustomerAPI.Controllers.CustomerController",
-    "Method": "CreateCustomer",
+    "Method": "PostCustomer",
     "RelativePath": "api/Customer",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "newCustomer",
+        "Name": "Customer",
         "Type": "CustomerAPI.Models.Customer",
         "IsRequired": true
       }
@@ -59,21 +49,11 @@
         "IsRequired": true
       }
     ],
-    "ReturnTypes": [
-      {
-        "Type": "CustomerAPI.Models.Customer",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
+    "ReturnTypes": []
   },
   {
     "ContainingType": "CustomerAPI.Controllers.CustomerController",
-    "Method": "UpdateCustomer",
+    "Method": "PutCustomer",
     "RelativePath": "api/Customer/{id}",
     "HttpMethod": "PUT",
     "IsController": true,
@@ -85,7 +65,7 @@
         "IsRequired": true
       },
       {
-        "Name": "updatedCustomer",
+        "Name": "Customer",
         "Type": "CustomerAPI.Models.Customer",
         "IsRequired": true
       }
@@ -104,6 +84,32 @@
         "Name": "id",
         "Type": "System.Int32",
         "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "CustomerAPI.Models.Customer",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "CustomerAPI.Controllers.CustomerController",
+    "Method": "DeleteMultiple",
+    "RelativePath": "api/Customer/Delete",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ids",
+        "Type": "System.Int32[]",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []

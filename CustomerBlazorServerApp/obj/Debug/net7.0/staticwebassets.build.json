@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "aCbmKZKA9jWm3aW8WJnU8ZncXZuMHraazipxWao4tyg=",
+  "Hash": "T6mmGkfJnfctVKnXif/EIneGzCpy/6z1S8LVT8Zm1xw=",
   "Source": "CustomerBlazorServerApp",
   "BasePath": "_content/CustomerBlazorServerApp",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "CustomerBlazorServerApp\\wwwroot",
       "Source": "CustomerBlazorServerApp",
-      "ContentRoot": "C:\\Users\\Satheesh\\source\\repos\\CustomerBlazorApplication\\CustomerBlazorServerApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Satheesh\\source\\repos\\Blazor\\CustomerBlazorServerApp\\wwwroot\\",
       "BasePath": "_content/CustomerBlazorServerApp",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\Satheesh\\source\\repos\\CustomerBlazorApplication\\CustomerBlazorServerApp\\obj\\Debug\\net7.0\\scopedcss\\bundle\\CustomerBlazorServerApp.styles.css",
+      "Identity": "C:\\Users\\Satheesh\\source\\repos\\Blazor\\CustomerBlazorServerApp\\obj\\Debug\\net7.0\\scopedcss\\bundle\\CustomerBlazorServerApp.styles.css",
       "SourceId": "CustomerBlazorServerApp",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\Satheesh\\source\\repos\\CustomerBlazorApplication\\CustomerBlazorServerApp\\obj\\Debug\\net7.0\\scopedcss\\bundle\\",
+      "ContentRoot": "C:\\Users\\Satheesh\\source\\repos\\Blazor\\CustomerBlazorServerApp\\obj\\Debug\\net7.0\\scopedcss\\bundle\\",
       "BasePath": "_content/CustomerBlazorServerApp",
       "RelativePath": "CustomerBlazorServerApp.styles.css",
       "AssetKind": "All",
@@ -33,13 +33,13 @@
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Satheesh\\source\\repos\\CustomerBlazorApplication\\CustomerBlazorServerApp\\obj\\Debug\\net7.0\\scopedcss\\bundle\\CustomerBlazorServerApp.styles.css"
+      "OriginalItemSpec": "C:\\Users\\Satheesh\\source\\repos\\Blazor\\CustomerBlazorServerApp\\obj\\Debug\\net7.0\\scopedcss\\bundle\\CustomerBlazorServerApp.styles.css"
     },
     {
-      "Identity": "C:\\Users\\Satheesh\\source\\repos\\CustomerBlazorApplication\\CustomerBlazorServerApp\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\CustomerBlazorServerApp.bundle.scp.css",
+      "Identity": "C:\\Users\\Satheesh\\source\\repos\\Blazor\\CustomerBlazorServerApp\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\CustomerBlazorServerApp.bundle.scp.css",
       "SourceId": "CustomerBlazorServerApp",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\Satheesh\\source\\repos\\CustomerBlazorApplication\\CustomerBlazorServerApp\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\",
+      "ContentRoot": "C:\\Users\\Satheesh\\source\\repos\\Blazor\\CustomerBlazorServerApp\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\",
       "BasePath": "_content/CustomerBlazorServerApp",
       "RelativePath": "CustomerBlazorServerApp.bundle.scp.css",
       "AssetKind": "All",
@@ -52,13 +52,13 @@
       "AssetTraitValue": "ProjectBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Satheesh\\source\\repos\\CustomerBlazorApplication\\CustomerBlazorServerApp\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\CustomerBlazorServerApp.bundle.scp.css"
+      "OriginalItemSpec": "C:\\Users\\Satheesh\\source\\repos\\Blazor\\CustomerBlazorServerApp\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\CustomerBlazorServerApp.bundle.scp.css"
     },
     {
-      "Identity": "C:\\Users\\Satheesh\\source\\repos\\CustomerBlazorApplication\\CustomerBlazorServerApp\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
+      "Identity": "C:\\Users\\Satheesh\\source\\repos\\Blazor\\CustomerBlazorServerApp\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
       "SourceId": "CustomerBlazorServerApp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Satheesh\\source\\repos\\CustomerBlazorApplication\\CustomerBlazorServerApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Satheesh\\source\\repos\\Blazor\\CustomerBlazorServerApp\\wwwroot\\",
       "BasePath": "_content/CustomerBlazorServerApp",
       "RelativePath": "css/bootstrap/bootstrap.min.css",
       "AssetKind": "All",
@@ -74,10 +74,10 @@
       "OriginalItemSpec": "wwwroot\\css\\bootstrap\\bootstrap.min.css"
     },
     {
-      "Identity": "C:\\Users\\Satheesh\\source\\repos\\CustomerBlazorApplication\\CustomerBlazorServerApp\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
+      "Identity": "C:\\Users\\Satheesh\\source\\repos\\Blazor\\CustomerBlazorServerApp\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
       "SourceId": "CustomerBlazorServerApp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Satheesh\\source\\repos\\CustomerBlazorApplication\\CustomerBlazorServerApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Satheesh\\source\\repos\\Blazor\\CustomerBlazorServerApp\\wwwroot\\",
       "BasePath": "_content/CustomerBlazorServerApp",
       "RelativePath": "css/bootstrap/bootstrap.min.css.map",
       "AssetKind": "All",
@@ -93,10 +93,10 @@
       "OriginalItemSpec": "wwwroot\\css\\bootstrap\\bootstrap.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\Satheesh\\source\\repos\\CustomerBlazorApplication\\CustomerBlazorServerApp\\wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css",
+      "Identity": "C:\\Users\\Satheesh\\source\\repos\\Blazor\\CustomerBlazorServerApp\\wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css",
       "SourceId": "CustomerBlazorServerApp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Satheesh\\source\\repos\\CustomerBlazorApplication\\CustomerBlazorServerApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Satheesh\\source\\repos\\Blazor\\CustomerBlazorServerApp\\wwwroot\\",
       "BasePath": "_content/CustomerBlazorServerApp",
       "RelativePath": "css/open-iconic/font/css/open-iconic-bootstrap.min.css",
       "AssetKind": "All",
@@ -112,10 +112,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css"
     },
     {
-      "Identity": "C:\\Users\\Satheesh\\source\\repos\\CustomerBlazorApplication\\CustomerBlazorServerApp\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot",
+      "Identity": "C:\\Users\\Satheesh\\source\\repos\\Blazor\\CustomerBlazorServerApp\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot",
       "SourceId": "CustomerBlazorServerApp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Satheesh\\source\\repos\\CustomerBlazorApplication\\CustomerBlazorServerApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Satheesh\\source\\repos\\Blazor\\CustomerBlazorServerApp\\wwwroot\\",
       "BasePath": "_content/CustomerBlazorServerApp",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.eot",
       "AssetKind": "All",
@@ -131,10 +131,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot"
     },
     {
-      "Identity": "C:\\Users\\Satheesh\\source\\repos\\CustomerBlazorApplication\\CustomerBlazorServerApp\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf",
+      "Identity": "C:\\Users\\Satheesh\\source\\repos\\Blazor\\CustomerBlazorServerApp\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf",
       "SourceId": "CustomerBlazorServerApp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Satheesh\\source\\repos\\CustomerBlazorApplication\\CustomerBlazorServerApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Satheesh\\source\\repos\\Blazor\\CustomerBlazorServerApp\\wwwroot\\",
       "BasePath": "_content/CustomerBlazorServerApp",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.otf",
       "AssetKind": "All",
@@ -150,10 +150,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf"
     },
     {
-      "Identity": "C:\\Users\\Satheesh\\source\\repos\\CustomerBlazorApplication\\CustomerBlazorServerApp\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg",
+      "Identity": "C:\\Users\\Satheesh\\source\\repos\\Blazor\\CustomerBlazorServerApp\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg",
       "SourceId": "CustomerBlazorServerApp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Satheesh\\source\\repos\\CustomerBlazorApplication\\CustomerBlazorServerApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Satheesh\\source\\repos\\Blazor\\CustomerBlazorServerApp\\wwwroot\\",
       "BasePath": "_content/CustomerBlazorServerApp",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.svg",
       "AssetKind": "All",
@@ -169,10 +169,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg"
     },
     {
-      "Identity": "C:\\Users\\Satheesh\\source\\repos\\CustomerBlazorApplication\\CustomerBlazorServerApp\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf",
+      "Identity": "C:\\Users\\Satheesh\\source\\repos\\Blazor\\CustomerBlazorServerApp\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf",
       "SourceId": "CustomerBlazorServerApp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Satheesh\\source\\repos\\CustomerBlazorApplication\\CustomerBlazorServerApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Satheesh\\source\\repos\\Blazor\\CustomerBlazorServerApp\\wwwroot\\",
       "BasePath": "_content/CustomerBlazorServerApp",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.ttf",
       "AssetKind": "All",
@@ -188,10 +188,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf"
     },
     {
-      "Identity": "C:\\Users\\Satheesh\\source\\repos\\CustomerBlazorApplication\\CustomerBlazorServerApp\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff",
+      "Identity": "C:\\Users\\Satheesh\\source\\repos\\Blazor\\CustomerBlazorServerApp\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff",
       "SourceId": "CustomerBlazorServerApp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Satheesh\\source\\repos\\CustomerBlazorApplication\\CustomerBlazorServerApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Satheesh\\source\\repos\\Blazor\\CustomerBlazorServerApp\\wwwroot\\",
       "BasePath": "_content/CustomerBlazorServerApp",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.woff",
       "AssetKind": "All",
@@ -207,10 +207,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff"
     },
     {
-      "Identity": "C:\\Users\\Satheesh\\source\\repos\\CustomerBlazorApplication\\CustomerBlazorServerApp\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
+      "Identity": "C:\\Users\\Satheesh\\source\\repos\\Blazor\\CustomerBlazorServerApp\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
       "SourceId": "CustomerBlazorServerApp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Satheesh\\source\\repos\\CustomerBlazorApplication\\CustomerBlazorServerApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Satheesh\\source\\repos\\Blazor\\CustomerBlazorServerApp\\wwwroot\\",
       "BasePath": "_content/CustomerBlazorServerApp",
       "RelativePath": "css/open-iconic/FONT-LICENSE",
       "AssetKind": "All",
@@ -226,10 +226,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\FONT-LICENSE"
     },
     {
-      "Identity": "C:\\Users\\Satheesh\\source\\repos\\CustomerBlazorApplication\\CustomerBlazorServerApp\\wwwroot\\css\\open-iconic\\ICON-LICENSE",
+      "Identity": "C:\\Users\\Satheesh\\source\\repos\\Blazor\\CustomerBlazorServerApp\\wwwroot\\css\\open-iconic\\ICON-LICENSE",
       "SourceId": "CustomerBlazorServerApp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Satheesh\\source\\repos\\CustomerBlazorApplication\\CustomerBlazorServerApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Satheesh\\source\\repos\\Blazor\\CustomerBlazorServerApp\\wwwroot\\",
       "BasePath": "_content/CustomerBlazorServerApp",
       "RelativePath": "css/open-iconic/ICON-LICENSE",
       "AssetKind": "All",
@@ -245,10 +245,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\ICON-LICENSE"
     },
     {
-      "Identity": "C:\\Users\\Satheesh\\source\\repos\\CustomerBlazorApplication\\CustomerBlazorServerApp\\wwwroot\\css\\open-iconic\\README.md",
+      "Identity": "C:\\Users\\Satheesh\\source\\repos\\Blazor\\CustomerBlazorServerApp\\wwwroot\\css\\open-iconic\\README.md",
       "SourceId": "CustomerBlazorServerApp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Satheesh\\source\\repos\\CustomerBlazorApplication\\CustomerBlazorServerApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Satheesh\\source\\repos\\Blazor\\CustomerBlazorServerApp\\wwwroot\\",
       "BasePath": "_content/CustomerBlazorServerApp",
       "RelativePath": "css/open-iconic/README.md",
       "AssetKind": "All",
@@ -264,10 +264,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\README.md"
     },
     {
-      "Identity": "C:\\Users\\Satheesh\\source\\repos\\CustomerBlazorApplication\\CustomerBlazorServerApp\\wwwroot\\css\\site.css",
+      "Identity": "C:\\Users\\Satheesh\\source\\repos\\Blazor\\CustomerBlazorServerApp\\wwwroot\\css\\site.css",
       "SourceId": "CustomerBlazorServerApp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Satheesh\\source\\repos\\CustomerBlazorApplication\\CustomerBlazorServerApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Satheesh\\source\\repos\\Blazor\\CustomerBlazorServerApp\\wwwroot\\",
       "BasePath": "_content/CustomerBlazorServerApp",
       "RelativePath": "css/site.css",
       "AssetKind": "All",
@@ -283,10 +283,10 @@
       "OriginalItemSpec": "wwwroot\\css\\site.css"
     },
     {
-      "Identity": "C:\\Users\\Satheesh\\source\\repos\\CustomerBlazorApplication\\CustomerBlazorServerApp\\wwwroot\\favicon.png",
+      "Identity": "C:\\Users\\Satheesh\\source\\repos\\Blazor\\CustomerBlazorServerApp\\wwwroot\\favicon.png",
       "SourceId": "CustomerBlazorServerApp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Satheesh\\source\\repos\\CustomerBlazorApplication\\CustomerBlazorServerApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Satheesh\\source\\repos\\Blazor\\CustomerBlazorServerApp\\wwwroot\\",
       "BasePath": "_content/CustomerBlazorServerApp",
       "RelativePath": "favicon.png",
       "AssetKind": "All",

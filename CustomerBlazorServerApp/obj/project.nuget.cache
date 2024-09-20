@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "mioPV+TrPpA=",
+  "dgSpecHash": "mgkq1rrAWbA=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Satheesh\\source\\repos\\CustomerBlazorApplication\\CustomerBlazorServerApp\\CustomerBlazorServerApp.csproj",
+  "projectFilePath": "C:\\Users\\Satheesh\\source\\repos\\Blazor\\CustomerBlazorServerApp\\CustomerBlazorServerApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Satheesh\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.1\\microsoft.netcore.platforms.1.1.1.nupkg.sha512",
     "C:\\Users\\Satheesh\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",

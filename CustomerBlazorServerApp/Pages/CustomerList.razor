@@ -2,6 +2,7 @@
 @using CustomerBlazorServerApp.Data
 @using CustomerBlazorServerApp.Services;
 @inject CustomerService customerService;
+@inject NavigationManager Navigation
 
 <PageTitle>Customer Order List</PageTitle>
 
@@ -15,6 +16,7 @@
 }
 else
 {
+    <button @onclick="NavigateToCustomer">Add Customer</button>
     <table class="table">
         <thead>
             <tr>
@@ -22,7 +24,9 @@ else
                 <th>Name</th>
                 <th>Address</th>
                 <th>Phone</th>
-                <th>Order Count</th>
+                <th>Product Name</th>
+                <th>Tracking ID</th>
+                <th>Tracking Status</th>
             </tr>
         </thead>
         <tbody>
@@ -33,7 +37,9 @@ else
                     <td>@customer.Name</td>
                     <td>@customer.Address</td>
                     <td>@customer.Phone</td>
-                    <td>@co?.orders.Count</td>
+                    <td>@customer.ProductName</td>
+                    <td>@customer.TrackingId</td>
+                    <td>@customer.TrackingStatus</td>
                 </tr>
             }
         </tbody>
@@ -46,5 +52,9 @@ else
     protected override async Task OnInitializedAsync()
     {
         co = (await customerService.GetAllCustomerData());
+    }
+    private void NavigateToCustomer()
+    {
+        Navigation.NavigateTo("/add-customer"); // Replace with your target page URL
     }
 }

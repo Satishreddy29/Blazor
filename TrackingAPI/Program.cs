@@ -1,3 +1,4 @@
+using Microsoft.EntityFrameworkCore;
 using TrackingApi.Services;
 
 var builder = WebApplication.CreateBuilder(args);

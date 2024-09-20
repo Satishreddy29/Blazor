@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using CustomerAPI.Models;
 using CustomerAPI.Helpers;
+using Microsoft.EntityFrameworkCore;
 
 namespace CustomerAPI.Controllers
 {
@@ -11,73 +12,112 @@ namespace CustomerAPI.Controllers
     [ApiController]
     public class CustomerController : ControllerBase
     {
-        [HttpGet]
-        public ActionResult<List<Customer>> GetCustomers()
+        private readonly CustomerContext _context;
+
+        public CustomerController(CustomerContext context)
         {
-            try
-            {
-                return CustomerJsonHelper.ReadFromJsonFile<Customer>();
-            }
-            catch (Exception ex)
-            {
-                return StatusCode(500, ex.Message);
-            }
+            _context = context;
+
+            _context.Database.EnsureCreated();
         }
-        [HttpGet("{id}")]
-        public ActionResult<Customer> GetCustomer(int id)
+
+        [HttpGet]
+        public async Task<ActionResult> GetAllCustomers()
         {
-            var people = CustomerJsonHelper.ReadFromJsonFile<Customer>();
-            var Customer = people.FirstOrDefault(p => p.Id == id);
+            return Ok(await _context.Customers.ToArrayAsync());
+        }
+
+        [HttpGet("{id}")]
+        public async Task<ActionResult> GetCustomer(int id)
+        {
+            var Customer = await _context.Customers.FindAsync(id);
             if (Customer == null)
             {
                 return NotFound();
             }
-            return Customer;
+            return Ok(Customer);
         }
 
         [HttpPost]
-        public ActionResult<Customer> CreateCustomer([FromBody] Customer newCustomer)
+        public async Task<ActionResult<Customer>> PostCustomer(Customer Customer)
         {
-            var people = CustomerJsonHelper.ReadFromJsonFile<Customer>();
-            people.Add(newCustomer);
-            CustomerJsonHelper.WriteToJsonFile(people);
-            return CreatedAtAction(nameof(GetCustomer), new { id = newCustomer.Id }, newCustomer);
+            if (!ModelState.IsValid) {
+                return BadRequest();
+            }
+            _context.Customers.Add(Customer);
+            await _context.SaveChangesAsync();
+
+            return CreatedAtAction(
+                "GetCustomer",
+                new { id = Customer.Id },
+                Customer);
         }
 
         [HttpPut("{id}")]
-        public ActionResult UpdateCustomer(int id, [FromBody] Customer updatedCustomer)
+        public async Task<ActionResult> PutCustomer(int id, Customer Customer)
         {
-            var people = CustomerJsonHelper.ReadFromJsonFile<Customer>();
-            var Customer = people.FirstOrDefault(p => p.Id == id);
-
-            if (Customer == null)
+            if (id != Customer.Id)
             {
-                return NotFound();
+                return BadRequest();
             }
 
-            Customer.Name = updatedCustomer.Name;
-            Customer.Address = updatedCustomer.Address;
-            Customer.Phone = updatedCustomer.Phone;
-            CustomerJsonHelper.WriteToJsonFile(people);
+            _context.Entry(Customer).State = EntityState.Modified;
+
+            try
+            {
+                await _context.SaveChangesAsync();
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                if (!_context.Customers.Any(p => p.Id == id))
+                {
+                    return NotFound();
+                } 
+                else
+                {
+                    throw;
+                }
+            }
 
             return NoContent();
         }
 
         [HttpDelete("{id}")]
-        public ActionResult DeleteCustomer(int id)
+        public async Task<ActionResult<Customer>> DeleteCustomer(int id)
         {
-            var people = CustomerJsonHelper.ReadFromJsonFile<Customer>();
-            var Customer = people.FirstOrDefault(p => p.Id == id);
-
+            var Customer = await _context.Customers.FindAsync(id);
             if (Customer == null)
             {
                 return NotFound();
             }
 
-            people.Remove(Customer);
-            CustomerJsonHelper.WriteToJsonFile(people);
+            _context.Customers.Remove(Customer);
+            await _context.SaveChangesAsync();
 
-            return NoContent();
+            return Customer;
+        }
+
+        [HttpPost]
+        [Route("Delete")]
+        public async Task<ActionResult> DeleteMultiple([FromQuery]int[] ids)
+        {
+            var Customers = new List<Customer>();
+            foreach (var id in ids)
+            {
+                var Customer = await _context.Customers.FindAsync(id);
+
+                if (Customer == null)
+                {
+                    return NotFound();
+                }
+
+                Customers.Add(Customer);
+            }
+
+            _context.Customers.RemoveRange(Customers);
+            await _context.SaveChangesAsync();
+
+            return Ok(Customers);
         }
     }
 }
