@@ -73,3 +73,4 @@ F:\Work\Blueverse\Blazor-master\CustomerBlazorServerApp\bin\Debug\net7.0\Microso
 F:\Work\Blueverse\Blazor-master\CustomerBlazorServerApp\bin\Debug\net7.0\System.Security.Permissions.dll
 F:\Work\Blueverse\Blazor-master\CustomerBlazorServerApp\bin\Debug\net7.0\Blazored.LocalStorage.dll
 F:\Work\Blueverse\Blazor-master\CustomerBlazorServerApp\obj\Debug\net7.0\scopedcss\Pages\Login.razor.rz.scp.css
+F:\Work\Blueverse\Blazor-master\CustomerBlazorServerApp\obj\Debug\net7.0\scopedcss\Pages\EditCustomer.razor.rz.scp.css

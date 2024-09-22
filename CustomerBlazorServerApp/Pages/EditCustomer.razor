@@ -1,0 +1,91 @@
+@page "/edit-customer/{id:int}"
+@using CustomerBlazorServerApp.Data
+@using CustomerBlazorServerApp.Services
+@inject CustomerService customerService
+@inject NavigationManager Navigation
+@inject IJSRuntime JS
+
+@code {
+    [Parameter]
+    public int Id { get; set; }
+    private Customer customer = new Customer();
+    private string errorMessage;
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            customer = await customerService.GetCustomerById(Id);
+        }
+        catch (Exception ex)
+        {
+            errorMessage = $"Error loading customer data: {ex.Message}";
+        }
+    }
+
+    private async Task HandleValidSubmit()
+    {
+        try
+        {
+            await customerService.UpdateCustomer(customer);
+            await JS.InvokeAsync<object>("alert", "Customer updated successfully!");
+            Navigation.NavigateTo("/customerlist");
+        }
+        catch (Exception ex)
+        {
+            errorMessage = $"Error updating customer: {ex.Message}";
+        }
+    }
+
+    private void NavigateToCustomerList()
+    {
+        Navigation.NavigateTo("/customerlist");
+    }
+}
+
+<h3>Edit Customer</h3>
+
+@if (!string.IsNullOrEmpty(errorMessage))
+{
+    <div class="alert alert-danger">@errorMessage</div>
+}
+
+@if (customer == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <div class="container">
+    <div class="row">
+         <div class="col-4 mx-auto"></div>
+         <div class="col-4 mx-auto">
+    <EditForm Model="@customer" OnValidSubmit="@HandleValidSubmit">
+        <DataAnnotationsValidator />
+        <ValidationSummary />
+
+        <div class="mb-3">
+            <label for="name">Name:</label>
+            <InputText id="name" class="form-control" @bind-Value="@customer.Name" />
+        </div>
+
+        <div class="mb-3">
+            <label for="address">Address:</label>
+            <InputText id="address" class="form-control" @bind-Value="@customer.Address" />
+        </div>
+
+        <div class="mb-3">
+            <label for="phone">Phone:</label>
+            <InputText id="phone" class="form-control" @bind-Value="@customer.Phone" />
+        </div>
+
+        <div class="text-center">
+            <button type="submit" class="btn btn-primary button">Save</button>
+            <button type="button" class="btn btn-secondary ms-4 button" @onclick="NavigateToCustomerList">Cancel</button>
+        </div>
+    </EditForm>
+    </div>
+        <div class="col-4 mx-auto"></div>
+    </div>
+</div>
+}

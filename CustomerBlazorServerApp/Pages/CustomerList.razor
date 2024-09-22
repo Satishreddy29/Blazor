@@ -4,6 +4,7 @@
 @using CustomerBlazorServerApp.Services;
 @inject CustomerService customerService;
 @inject NavigationManager Navigation
+@inject IJSRuntime JS
 
 <PageTitle>Customer Order List</PageTitle>
 
@@ -18,7 +19,7 @@
         }
         else
         {
-            <button @onclick="NavigateToCustomer">Add Customer</button>
+            <button class="btn btn-primary button" @onclick="NavigateToCustomer">Add Customer</button>
             <table class="table">
                 <thead>
                     <tr>
@@ -29,6 +30,7 @@
                         <th>Product Name</th>
                         <th>Tracking ID</th>
                         <th>Tracking Status</th>
+                        <th>Actions</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -42,10 +44,15 @@
                             <td>@customer.ProductName</td>
                             <td>@customer.TrackingId</td>
                             <td>@customer.TrackingStatus</td>
+                            <td>
+                                <button class="btn btn-secondary btn-sm" @onclick="@(() => EditCustomer(customer.Id))">Edit</button>
+                                <button class="btn btn-danger btn-sm" @onclick="@(() => DeleteCustomer(customer.Id))">Delete</button>
+                            </td>
                         </tr>
                     }
                 </tbody>
             </table>
+           
         }
 
 @code {
@@ -58,5 +65,26 @@
     private void NavigateToCustomer()
     {
         Navigation.NavigateTo("/add-customer");
+    }
+    private void EditCustomer(int id)
+    {
+        Navigation.NavigateTo($"/edit-customer/{id}");
+    }
+    private async Task DeleteCustomer(int id)
+    {
+        var confirmed = await JS.InvokeAsync<bool>("confirm", "Are you sure you want to delete this customer?");
+        
+        if (confirmed)
+        {
+            await customerService.DeleteCustomer(id);
+            co.customers.RemoveAll(c => c.Id == id);
+            await JS.InvokeAsync<object>("alert", "Customer deleted successfully!");
+            StateHasChanged();
+        }
+        else
+        {
+            // Optionally log or handle the cancellation
+            //_logger.LogInformation("Deletion of customer with ID: {CustomerId} was cancelled.", id);
+        }
     }
 }

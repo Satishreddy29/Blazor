@@ -8,20 +8,12 @@ namespace CustomerAPI.Models
         {
 
             modelBuilder.Entity<Customer>().HasData(
-                new Customer { Id = 1, Name = "James", Address = "India", Phone = "6547893215"},
-                new Customer { Id = 2, Name = "John", Address = "US", Phone = "6547893215" },
-                new Customer { Id = 3, Name = "Noah", Address = "Austaria", Phone = "6547893215"},
-                new Customer { Id = 4, Name = "Tim", Address = "India", Phone = "6547893215"},
-                new Customer { Id = 5, Name = "Oliver", Address = "US", Phone = "6547893215"},
-                new Customer { Id = 6, Name = "Theodore", Address = "India", Phone = "6547893215"},
-                new Customer { Id = 7, Name = "Henry", Address = "US", Phone = "6547893215"},
-                new Customer { Id = 8, Name = "Lucas", Address = "Germany", Phone = "6547893215"},
-                new Customer { Id = 9, Name = "William", Address = "Austaria", Phone = "6547893215"},
-                new Customer { Id = 10, Name = "Leo", Address = "India", Phone = "6547893215"},
-                new Customer { Id = 11, Name = "Simran", Address = "US", Phone = "6547893215"},
-                new Customer { Id = 12, Name = "Owen", Address = "India", Phone = "6547893215"},
-                new Customer { Id = 13, Name = "Samuel", Address = "US", Phone = "6547893215"},
-                new Customer { Id = 14, Name = "Levi", Address = "Germany", Phone = "6547893215"});
+                new Customer { Id = 1, Name = "James Broadman", Address = "2347 University drive NY 2333", Phone = "983-672-9008"},
+                new Customer { Id = 2, Name = "John Paul", Address = "8997 LongBeach blvd Tampa FL 78923", Phone = "654-78-3215" },
+                new Customer { Id = 3, Name = "Noah Peterson", Address = "886 Washingtion square DC DC 10098", Phone = "443-553-2221"},
+                new Customer { Id = 4, Name = "Tim Brookes", Address = "4322 Loundoun reserve Fairfax VA 20171", Phone = "890-334-5567"},
+                new Customer { Id = 5, Name = "Oliver MCkinely", Address = "2341 Zulla Chase Princeton NJ 879116", Phone = "234-673-2241"});
+
         }
     }
 }

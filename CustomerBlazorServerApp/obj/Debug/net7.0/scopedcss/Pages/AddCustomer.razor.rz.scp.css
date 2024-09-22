@@ -48,21 +48,21 @@ input[type="text"]:focus[b-rfcy02whrq] {
 }
 
 /* Button Styles */
-button[b-rfcy02whrq] {
+/* button {
     background-color: #007bff;
     color: white;
     border: none;
     border-radius: 5px;
-    padding: 12px 20px; /* Increased padding */
+    padding: 12px 20px; 
     font-size: 1em;
     cursor: pointer;
-    transition: background-color 0.3s, transform 0.2s; /* Add scale effect */
+    transition: background-color 0.3s, transform 0.2s;
 }
 
-button:hover[b-rfcy02whrq] {
+button:hover {
     background-color: #0056b3;
-    transform: translateY(-2px); /* Slight lift on hover */
-}
+    transform: translateY(-2px); 
+} */
 
 button:active[b-rfcy02whrq] {
     transform: translateY(0); /* Reset on click */
@@ -85,4 +85,9 @@ button:active[b-rfcy02whrq] {
     button[b-rfcy02whrq] {
         width: 100%; /* Full width button on smaller screens */
     }
+}
+
+.button[b-rfcy02whrq] {
+    min-width: 100px;
+    max-width: 100px;
 }

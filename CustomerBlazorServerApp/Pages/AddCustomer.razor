@@ -4,6 +4,7 @@
 @using CustomerBlazorServerApp.Services
 @inject CustomerService customerService
 @inject NavigationManager Navigation
+@inject IJSRuntime JS
 
 <h3>Add Customer</h3>
 <div class="container">
@@ -34,7 +35,8 @@
 
       
             <div class="text-center">
-                <button class="btn btn-primary"type="submit">Add Customer</button>
+                <button class="btn btn-primary button" type="submit">Add</button>
+                <button class="btn btn-secondary ms-4 button" type="button" @onclick="HandleCancel">Cancel</button>
             </div>
         </EditForm>
         </div>
@@ -48,7 +50,13 @@
     private async Task HandleValidSubmit()
     {
         await customerService.AddCustomerAsync(newCustomer);
+        await JS.InvokeAsync<object>("alert", "Customer added successfully!");
         newCustomer = new Customer();
+        Navigation.NavigateTo("/customerlist");
+    }
+
+    private void  HandleCancel()
+    {
         Navigation.NavigateTo("/customerlist");
     }
 }

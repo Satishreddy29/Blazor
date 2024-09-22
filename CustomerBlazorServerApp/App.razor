@@ -10,16 +10,16 @@
         </LayoutView>
     </NotFound> *@
      <Found Context="routeData">
-            <AuthorizeRouteView RouteData="@routeData" DefaultLayout="@typeof(MainLayout)">
-                <NotAuthorized>
-                    <RedirectToLogin />
-                </NotAuthorized>
-                <Authorizing>
-                    <p>Authorizing...</p>
-                </Authorizing>
-            </AuthorizeRouteView>
-        </Found>
-        <NotFound>
-            <RedirectToLogin />
-        </NotFound>
+        <AuthorizeRouteView RouteData="@routeData" DefaultLayout="@typeof(MainLayout)">
+            <NotAuthorized>
+                <RedirectToLogin />
+            </NotAuthorized>
+            <Authorizing>
+                <p>Authorizing...</p>
+            </Authorizing>
+        </AuthorizeRouteView>
+    </Found>
+    <NotFound>
+        <RedirectToLogin />
+    </NotFound>
 </Router>

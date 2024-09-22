@@ -1,0 +1,55 @@
+# Build Folders
+bin/
+obj/
+
+# User-specific files
+*.suo
+*.user
+*.userprefs
+*.sln.ide
+
+# Visual Studio Code files
+.vscode/
+.history/
+
+# Rider files
+.idea/
+*.sln.iml
+
+# Visual Studio temporary files
+*.ncb
+*.sdf
+*.opensdf
+*.opendb
+*.sln.ide
+
+# DotNet Core files
+project.lock.json
+project.fragment.lock.json
+*.dbmdl
+*.dbproj
+
+# Publish folder
+publish/
+
+# Other
+*.log
+*.tmp
+*.temp
+*.swp
+.DS_Store
+Thumbs.db
+
+# JetBrains Rider
+.idea/
+
+# NPM packages
+node_modules/
+
+# NuGet packages
+*.nupkg
+**/packages/*
+!**/packages/build/
+
+# Tooling
+*.cache

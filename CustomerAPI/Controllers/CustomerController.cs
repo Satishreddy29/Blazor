@@ -24,6 +24,7 @@ namespace CustomerAPI.Controllers
         [HttpGet]
         public async Task<ActionResult> GetAllCustomers()
         {
+            //throw new CustomNotFoundException("Item not found.");
             _logger.LogInformation("CustomerController: Calling Method GetAllCustomers");
             return Ok(await _context.Customers.ToArrayAsync());
         }

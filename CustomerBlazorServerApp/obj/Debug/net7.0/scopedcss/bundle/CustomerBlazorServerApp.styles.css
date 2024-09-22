@@ -49,21 +49,21 @@ input[type="text"]:focus[b-rfcy02whrq] {
 }
 
 /* Button Styles */
-button[b-rfcy02whrq] {
+/* button {
     background-color: #007bff;
     color: white;
     border: none;
     border-radius: 5px;
-    padding: 12px 20px; /* Increased padding */
+    padding: 12px 20px; 
     font-size: 1em;
     cursor: pointer;
-    transition: background-color 0.3s, transform 0.2s; /* Add scale effect */
+    transition: background-color 0.3s, transform 0.2s;
 }
 
-button:hover[b-rfcy02whrq] {
+button:hover {
     background-color: #0056b3;
-    transform: translateY(-2px); /* Slight lift on hover */
-}
+    transform: translateY(-2px); 
+} */
 
 button:active[b-rfcy02whrq] {
     transform: translateY(0); /* Reset on click */
@@ -86,6 +86,105 @@ button:active[b-rfcy02whrq] {
     button[b-rfcy02whrq] {
         width: 100%; /* Full width button on smaller screens */
     }
+}
+
+.button[b-rfcy02whrq] {
+    min-width: 100px;
+    max-width: 100px;
+}
+/* _content/CustomerBlazorServerApp/Pages/EditCustomer.razor.rz.scp.css */
+/* Global Styles */
+body[b-qacaka623z] {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Page Title */
+h3[b-qacaka623z] {
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center; /* Center the title */
+}
+
+/* Form Styles */
+.EditForm[b-qacaka623z] {
+    background-color: white;
+    padding: 30px; /* Increased padding for a more spacious feel */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 500px; /* Limit the width for better readability */
+    margin: auto; /* Center the form on the page */
+}
+
+/* Label Styles */
+label[b-qacaka623z] {
+    display: block;
+    margin-bottom: 8px; /* Slightly more spacing */
+    font-weight: bold;
+    font-size: 1.1em; /* Increase font size for better visibility */
+}
+
+/* Input Styles */
+input[type="text"][b-qacaka623z] {
+    width: 100%;
+    padding: 12px; /* Increased padding */
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+    transition: border-color 0.3s; /* Transition effect for focus */
+}
+
+input[type="text"]:focus[b-qacaka623z] {
+    border-color: #007bff; /* Change border color on focus */
+    outline: none; /* Remove outline */
+}
+
+/* Button Styles */
+/* button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 12px 20px; 
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s; 
+}
+
+button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px); 
+} */
+
+button:active[b-qacaka623z] {
+    transform: translateY(0); /* Reset on click */
+}
+
+/* Validation Message Styles */
+.validation-message[b-qacaka623z] {
+    color: red;
+    font-size: 0.9em;
+    margin-top: -10px;
+    margin-bottom: 10px;
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+    .EditForm[b-qacaka623z] {
+        padding: 20px; /* Adjust padding for smaller screens */
+    }
+
+    button[b-qacaka623z] {
+        width: 100%; /* Full width button on smaller screens */
+    }
+}
+
+.button[b-qacaka623z] {
+    min-width: 100px;
+    max-width: 100px;
 }
 /* _content/CustomerBlazorServerApp/Pages/Login.razor.rz.scp.css */
 /* Global Styles */
