@@ -50,5 +50,5 @@ The Customer Order Tracking Application is a full-stack solution built using Bla
 1. **Clone the Repository**
 
    ```bash
-   git clone https://github.com/yourusername/CustomerOrderTrackingApp.git
+   git clone https://github.com/Satishreddy29/Blazor.git
    cd CustomerOrderTrackingApp
