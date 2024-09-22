@@ -1149,10 +1149,7 @@
           "Swashbuckle.AspNetCore": "6.5.0"
         },
         "runtime": {
-          "CustomerAPI.dll": {
-            "assemblyVersion": "1.0.0",
-            "fileVersion": "1.0.0.0"
-          }
+          "CustomerAPI.dll": {}
         },
         "compile": {
           "CustomerAPI.dll": {}

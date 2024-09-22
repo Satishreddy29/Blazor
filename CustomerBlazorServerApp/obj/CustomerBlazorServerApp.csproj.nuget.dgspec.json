@@ -1,34 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Satheesh\\source\\repos\\Blazor\\CustomerBlazorServerApp\\CustomerBlazorServerApp.csproj": {}
+    "F:\\Work\\Blueverse\\Blazor-master\\CustomerBlazorServerApp\\CustomerBlazorServerApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Satheesh\\source\\repos\\Blazor\\CustomerBlazorServerApp\\CustomerBlazorServerApp.csproj": {
+    "F:\\Work\\Blueverse\\Blazor-master\\CustomerBlazorServerApp\\CustomerBlazorServerApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Satheesh\\source\\repos\\Blazor\\CustomerBlazorServerApp\\CustomerBlazorServerApp.csproj",
+        "projectUniqueName": "F:\\Work\\Blueverse\\Blazor-master\\CustomerBlazorServerApp\\CustomerBlazorServerApp.csproj",
         "projectName": "CustomerBlazorServerApp",
-        "projectPath": "C:\\Users\\Satheesh\\source\\repos\\Blazor\\CustomerBlazorServerApp\\CustomerBlazorServerApp.csproj",
-        "packagesPath": "C:\\Users\\Satheesh\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Satheesh\\source\\repos\\Blazor\\CustomerBlazorServerApp\\obj\\",
+        "projectPath": "F:\\Work\\Blueverse\\Blazor-master\\CustomerBlazorServerApp\\CustomerBlazorServerApp.csproj",
+        "packagesPath": "C:\\Users\\hi\\.nuget\\packages\\",
+        "outputPath": "F:\\Work\\Blueverse\\Blazor-master\\CustomerBlazorServerApp\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Satheesh\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\hi\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -41,17 +32,24 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
           "dependencies": {
+            "Blazored.LocalStorage": {
+              "target": "Package",
+              "version": "[4.5.0, )"
+            },
+            "Microsoft.AspNetCore.Authentication.Google": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.AspNetCore.Identity": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[13.0.3, )"
@@ -80,7 +78,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.410\\RuntimeIdentifierGraph.json"
         }
       }
     }

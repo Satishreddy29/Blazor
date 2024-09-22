@@ -30,12 +30,24 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ3VzdG9tZXJMaXN0LnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
+[c:/Users/Satheesh/source/repos/Blazor/CustomerBlazorServerApp/Pages/ErrorNotification.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3JOb3RpZmljYXRpb24ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
 [c:/Users/Satheesh/source/repos/Blazor/CustomerBlazorServerApp/Pages/FetchData.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRmV0Y2hEYXRhLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
 [c:/Users/Satheesh/source/repos/Blazor/CustomerBlazorServerApp/Pages/Index.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/Satheesh/source/repos/Blazor/CustomerBlazorServerApp/Pages/RedirectToLogin.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVkaXJlY3RUb0xvZ2luLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/Satheesh/source/repos/Blazor/CustomerBlazorServerApp/RedirectToLogin.razor]
+build_metadata.AdditionalFiles.TargetPath = UmVkaXJlY3RUb0xvZ2luLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
 [c:/Users/Satheesh/source/repos/Blazor/CustomerBlazorServerApp/Shared/SurveyPrompt.razor]
@@ -49,6 +61,10 @@ build_metadata.AdditionalFiles.CssScope =
 [c:/Users/Satheesh/source/repos/Blazor/CustomerBlazorServerApp/Pages/AddCustomer.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRkQ3VzdG9tZXIucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-rfcy02whrq
+
+[c:/Users/Satheesh/source/repos/Blazor/CustomerBlazorServerApp/Pages/Login.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9naW4ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-4z4rqri0ed
 
 [c:/Users/Satheesh/source/repos/Blazor/CustomerBlazorServerApp/Shared/MainLayout.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=

@@ -1,19 +1,43 @@
 ﻿@inherits LayoutComponentBase
+@inject NavigationManager Navigation
+@* @inject CustomAuthStateProvider AuthStateProvider *@
+@inject AuthenticationStateProvider AuthenticationStateProvider
 
 <PageTitle>CustomerBlazorServerApp</PageTitle>
 
 <div class="page">
+    @if (!IsLoginPage())
+    {
     <div class="sidebar">
         <NavMenu />
     </div>
+    }
 
     <main>
+        @if (!IsLoginPage())
+    {
         <div class="top-row px-4">
-            <a href="https://docs.microsoft.com/aspnet/" target="_blank">About</a>
+            @* <a href="https://docs.microsoft.com/aspnet/" target="_blank">Logout</a> *@
+            <a @onclick="Logout">Logout</a>
         </div>
+        }
 
         <article class="content px-4">
             @Body
         </article>
     </main>
 </div>
+
+@code {
+    //private void Login() => Navigation.NavigateTo("/login");
+
+    private void Logout()
+    {
+        //AuthStateProvider.MarkUserAsLoggedOut();
+        Navigation.NavigateTo("/login");
+    }
+    private bool IsLoginPage()
+    {
+        return Navigation.Uri.EndsWith("/login", StringComparison.OrdinalIgnoreCase);
+    }
+}

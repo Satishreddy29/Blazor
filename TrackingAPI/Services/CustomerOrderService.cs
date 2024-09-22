@@ -1,47 +1,48 @@
 ﻿using TrackingApi.Model;
+using Microsoft.Extensions.Configuration;
 
 namespace TrackingApi.Services
 {
     public class CustomerOrderService
     {
-
         private readonly HttpClient httpClient;
+        private readonly IConfiguration configuration; 
+        private readonly ILogger<CustomerOrderService> _logger;
 
-        public CustomerOrderService(HttpClient httpClient)
+        public CustomerOrderService(HttpClient httpClient, IConfiguration configuration, ILogger<CustomerOrderService> logger) 
         {
             this.httpClient = httpClient;
+            this.configuration = configuration;
+            _logger = logger; 
         }
         public async Task<Tracking> GetAllCustomerData()
         {
-            // Fetch customer data
-            var custresult = await httpClient.GetFromJsonAsync<IEnumerable<Customer>>("https://localhost:7023/api/customer");
-            var productresult = await httpClient.GetFromJsonAsync<IEnumerable<Product>>("https://localhost:7177/api/orders");
+            _logger.LogInformation("CustomerOrderService: Calling Method GetAllCustomerData");
+            var customerApiUrl = configuration["ApiSettings:CustomerApiUrl"];
+            var orderApiUrl = configuration["ApiSettings:OrderApiUrl"];
+            
+            var custresult = await httpClient.GetFromJsonAsync<IEnumerable<Customer>>(customerApiUrl);
+            var productresult = await httpClient.GetFromJsonAsync<IEnumerable<Product>>(orderApiUrl);
 
-            // Ensure the API calls returned results
             if (custresult == null || productresult == null)
             {
-                return new Tracking(); // Or throw an exception
+                return new Tracking(); 
             }
 
-            // Fetch tracking statuses asynchronously
-            
-           
-            // Join customer data with tracking statuses
             var joinedData = from customer in custresult
                             join status in productresult on customer.Id equals status.CustomerId into statusGroup
-                            from status in statusGroup.DefaultIfEmpty() // Left join to include customers without statuses
+                            from status in statusGroup.DefaultIfEmpty() 
                             select new Customer
                             {
                                 Id = customer.Id,
-                                Name = customer.Name, // Assuming Customer has a Name property
-                                Phone = customer.Phone, // Assuming Customer has a Name property
-                                Address = customer.Address, // Assuming Customer has a Name property
+                                Name = customer.Name, 
+                                Phone = customer.Phone, 
+                                Address = customer.Address, 
                                 ProductName = string.IsNullOrEmpty(status?.Name) ? "---" : status.Name,
                                 TrackingId = string.IsNullOrEmpty(status?.TrackingId) ? "---" : status.TrackingId,
                                 TrackingStatus = string.IsNullOrEmpty(status?.TrackingStatus) ? "No Order" : status.TrackingStatus
                             };
 
-            // Create and return the tracking object
             return new Tracking
             {
                 customers = joinedData.ToList(),
@@ -51,8 +52,10 @@ namespace TrackingApi.Services
 
         public async Task AddCustomerDataAsync(Customer customer)
         {
-            var response = await httpClient.PostAsJsonAsync("https://localhost:7023/api/customer", customer);
-            response.EnsureSuccessStatusCode(); // Check for successful response
+            _logger.LogInformation("CustomerOrderService: Calling Method AddCustomerDataAsync, Customer Name : "+ customer.Name);
+            var customerApiUrl = configuration["ApiSettings:CustomerApiUrl"];
+            var response = await httpClient.PostAsJsonAsync(customerApiUrl, customer);
+            response.EnsureSuccessStatusCode();
         }
 
     }

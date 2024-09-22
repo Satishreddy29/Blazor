@@ -1,9 +1,16 @@
+using System.Net.Http.Headers;
+using Blazored.LocalStorage;
 using CustomerBlazorServerApp.Data;
 using CustomerBlazorServerApp.Services;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddBlazoredLocalStorage();
+
+builder.Logging.ClearProviders();
+builder.Logging.AddConsole();
 
 // Add services to the container.
 builder.Services.AddRazorPages();
@@ -12,11 +19,7 @@ builder.Services.AddSingleton<WeatherForecastService>();
 builder.Services.AddScoped<CustomerService>();
 
 // Configure HttpClient
-builder.Services.AddHttpClient("customerservice", (serviceProvider, httpClient) =>
-{
-    httpClient.BaseAddress = new Uri("https://localhost:7023/api/customer/");
-});
-
+builder.Services.AddHttpClient();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

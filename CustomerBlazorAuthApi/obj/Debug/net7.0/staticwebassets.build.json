@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "KiJ/Uo0S6XBRDJYFoDHgYM/+6o2zzC7D+9r8XltteMM=",
+  "Source": "CustomerBlazorAuthApi",
+  "BasePath": "_content/CustomerBlazorAuthApi",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

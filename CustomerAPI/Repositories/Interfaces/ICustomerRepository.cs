@@ -8,6 +8,5 @@ namespace CustomerAPI.Repositories.Interfaces
         List<Customer> GetAllCustomers();
         Task<ActionResult<IEnumerable<Customer>>> GetCustomerById(int id);
         Task<ActionResult> InsertCustomerDeatils(Customer customer);
-       // Task<ActionResult<Customer>> DeleteCustomerById(int id);
     }
 }

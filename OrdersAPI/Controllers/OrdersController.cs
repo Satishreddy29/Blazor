@@ -1,7 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using OrdersAPI.Helpers;
 using OrdersAPI.Models;
 
 namespace OrdersAPI.Controllers
@@ -11,23 +10,26 @@ namespace OrdersAPI.Controllers
     public class OrdersController : ControllerBase
     {
         private readonly OrderContext _context;
+        private readonly ILogger<OrdersController> _logger;
 
-        public OrdersController(OrderContext context)
+        public OrdersController(OrderContext context, ILogger<OrdersController> logger)
         {
             _context = context;
-
+            _logger = logger;
             _context.Database.EnsureCreated();
         }
 
         [HttpGet]
         public async Task<ActionResult> GetAllProducts()
         {
+            _logger.LogInformation("OrdersController: Calling Method GetAllProducts");
             return Ok(await _context.Products.ToArrayAsync());
         }
 
         [HttpGet("{id}")]
         public async Task<ActionResult> GetProduct(int id)
         {
+            _logger.LogInformation("OrdersController: Calling Method GetProduct ,Product Id : " + id);
             var product = await _context.Products.FindAsync(id);
             if (product == null)
             {
@@ -39,6 +41,7 @@ namespace OrdersAPI.Controllers
         [HttpPost]
         public async Task<ActionResult<Product>> PostProduct(Product product)
         {
+            _logger.LogInformation("OrdersController: Calling Method PostProduct ,Product Id : " + product.Id);
             if (!ModelState.IsValid) {
                 return BadRequest();
             }
@@ -54,6 +57,7 @@ namespace OrdersAPI.Controllers
         [HttpPut("{id}")]
         public async Task<ActionResult> PutProduct(int id, Product product)
         {
+            _logger.LogInformation("OrdersController: Calling Method PutProduct ,Product Id : " + product.Id);
             if (id != product.Id)
             {
                 return BadRequest();
@@ -83,6 +87,7 @@ namespace OrdersAPI.Controllers
         [HttpDelete("{id}")]
         public async Task<ActionResult<Product>> DeleteProduct(int id)
         {
+            _logger.LogInformation("OrdersController: Calling Method DeleteProduct ,Product Id : " + id);
             var product = await _context.Products.FindAsync(id);
             if (product == null)
             {
@@ -99,6 +104,7 @@ namespace OrdersAPI.Controllers
         [Route("Delete")]
         public async Task<ActionResult> DeleteMultiple([FromQuery]int[] ids)
         {
+            _logger.LogInformation("OrdersController: Calling Method DeleteMultiple ,Product Ids : " + string.Join<int>(",", ids));
             var products = new List<Product>();
             foreach (var id in ids)
             {

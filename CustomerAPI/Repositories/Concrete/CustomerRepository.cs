@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace CustomerAPI.Repositories.Concrete
 {
-    public class CustomerRepository//: ICustomerRepository
+    public class CustomerRepository
     {
 
         public async Task<List<Customer>> GetAllCustomers()

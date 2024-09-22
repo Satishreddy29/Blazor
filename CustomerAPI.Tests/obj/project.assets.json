@@ -3483,43 +3483,32 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Satheesh\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
-    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
+    "C:\\Users\\hi\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Satheesh\\source\\repos\\Blazor\\CustomerAPI.Tests\\CustomerAPI.Tests.csproj",
+      "projectUniqueName": "F:\\Work\\Blueverse\\Blazor-master\\CustomerAPI.Tests\\CustomerAPI.Tests.csproj",
       "projectName": "CustomerAPI.Tests",
-      "projectPath": "C:\\Users\\Satheesh\\source\\repos\\Blazor\\CustomerAPI.Tests\\CustomerAPI.Tests.csproj",
-      "packagesPath": "C:\\Users\\Satheesh\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Satheesh\\source\\repos\\Blazor\\CustomerAPI.Tests\\obj\\",
+      "projectPath": "F:\\Work\\Blueverse\\Blazor-master\\CustomerAPI.Tests\\CustomerAPI.Tests.csproj",
+      "packagesPath": "C:\\Users\\hi\\.nuget\\packages\\",
+      "outputPath": "F:\\Work\\Blueverse\\Blazor-master\\CustomerAPI.Tests\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Satheesh\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "C:\\Users\\hi\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net7.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Users\\Satheesh\\source\\repos\\Blazor\\CustomerAPI\\CustomerAPI.csproj": {
-              "projectPath": "C:\\Users\\Satheesh\\source\\repos\\Blazor\\CustomerAPI\\CustomerAPI.csproj"
+            "F:\\Work\\Blueverse\\Blazor-master\\CustomerAPI\\CustomerAPI.csproj": {
+              "projectPath": "F:\\Work\\Blueverse\\Blazor-master\\CustomerAPI\\CustomerAPI.csproj"
             }
           }
         }
@@ -3528,11 +3517,6 @@
         "warnAsError": [
           "NU1605"
         ]
-      },
-      "restoreAuditProperties": {
-        "enableAudit": "true",
-        "auditLevel": "low",
-        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -3584,7 +3568,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.410\\RuntimeIdentifierGraph.json"
       }
     }
   }

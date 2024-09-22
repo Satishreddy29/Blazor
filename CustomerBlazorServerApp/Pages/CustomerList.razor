@@ -1,4 +1,5 @@
 ﻿@page "/customerlist"
+
 @using CustomerBlazorServerApp.Data
 @using CustomerBlazorServerApp.Services;
 @inject CustomerService customerService;
@@ -6,45 +7,46 @@
 
 <PageTitle>Customer Order List</PageTitle>
 
-<h1>Customer Details</h1>
 
-<p>This component demonstrates fetching data from a service.</p>
+        <h1>Customer Details</h1>
 
-@if (co?.customers == null)
-{
-    <p><em>Loading...</em></p>
-}
-else
-{
-    <button @onclick="NavigateToCustomer">Add Customer</button>
-    <table class="table">
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>Name</th>
-                <th>Address</th>
-                <th>Phone</th>
-                <th>Product Name</th>
-                <th>Tracking ID</th>
-                <th>Tracking Status</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var customer in co.customers)
-            {
-                <tr>
-                    <td>@customer.Id</td>
-                    <td>@customer.Name</td>
-                    <td>@customer.Address</td>
-                    <td>@customer.Phone</td>
-                    <td>@customer.ProductName</td>
-                    <td>@customer.TrackingId</td>
-                    <td>@customer.TrackingStatus</td>
-                </tr>
-            }
-        </tbody>
-    </table>
-}
+        <p>This component demonstrates fetching data from a service.</p>
+
+        @if (co?.customers == null)
+        {
+            <p><em>Loading...</em></p>
+        }
+        else
+        {
+            <button @onclick="NavigateToCustomer">Add Customer</button>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Address</th>
+                        <th>Phone</th>
+                        <th>Product Name</th>
+                        <th>Tracking ID</th>
+                        <th>Tracking Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var customer in co.customers)
+                    {
+                        <tr>
+                            <td>@customer.Id</td>
+                            <td>@customer.Name</td>
+                            <td>@customer.Address</td>
+                            <td>@customer.Phone</td>
+                            <td>@customer.ProductName</td>
+                            <td>@customer.TrackingId</td>
+                            <td>@customer.TrackingStatus</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        }
 
 @code {
     private CustomerOrder co;
@@ -55,6 +57,6 @@ else
     }
     private void NavigateToCustomer()
     {
-        Navigation.NavigateTo("/add-customer"); // Replace with your target page URL
+        Navigation.NavigateTo("/add-customer");
     }
 }

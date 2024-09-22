@@ -1,4 +1,5 @@
 @page "/add-customer"
+
 @using CustomerBlazorServerApp.Data
 @using CustomerBlazorServerApp.Services
 @inject CustomerService customerService
@@ -46,11 +47,8 @@
 
     private async Task HandleValidSubmit()
     {
-        @* await CustomerService.AddCustomerAsync(newCustomer);
-        newCustomer = new Customer(); // Reset the form *@
         await customerService.AddCustomerAsync(newCustomer);
-        //customers = await CustomerService.GetCustomersAsync(); // Refresh customer list
-        newCustomer = new Customer(); // Reset the form
+        newCustomer = new Customer();
         Navigation.NavigateTo("/customerlist");
     }
 }

@@ -1,0 +1,82 @@
+@page "/login"
+@inject IConfiguration Configuration
+@using System.Net.Http.Headers
+@inject HttpClient Http
+@inject NavigationManager Navigation
+@inject Blazored.LocalStorage.ILocalStorageService localStorage
+
+<ErrorNotification Message="@errorMessage" IsVisible="@isErrorVisible" OnClose="HandleClose" />
+
+<h3>Login!</h3>
+<div class="container">
+    <div class="row">
+         <div class="col-4 mx-auto"></div>
+         <div class="col-4 mx-auto">
+        <EditForm Model="loginModel" OnValidSubmit="HandleLogin" class="ml-100">
+            <DataAnnotationsValidator />
+            <ValidationSummary />
+
+            <div class="mb-3">
+                <label class="form-label">Username:</label>
+                <InputText @bind-Value="loginModel.Username" class="form-control"/>
+                <ValidationMessage For="@(() => loginModel.Username)" />
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Password:</label>
+                <InputText @bind-Value="loginModel.Password" class="form-control"/>
+                <ValidationMessage For="@(() => loginModel.Password)" />
+            </div>
+      
+            <div class="text-center">
+                <button class="btn btn-primary"type="submit">Login</button>
+            </div>
+        </EditForm>
+        </div>
+        <div class="col-4 mx-auto"></div>
+    </div>
+</div>
+
+@code {
+    private User loginModel = new User();
+     private bool isErrorVisible;
+    private string errorMessage;
+
+    private async Task HandleLogin()
+    {
+        errorMessage = string.Empty; 
+        var authApiUrl = Configuration["ApiSettings:AuthApiUrl"];
+        var response = await Http.PostAsJsonAsync(authApiUrl, loginModel);
+        
+        var content = await response.Content.ReadAsStringAsync();
+
+        if (response.IsSuccessStatusCode)
+        {
+            var tokenResponse = await response.Content.ReadFromJsonAsync<TokenResponse>();
+            Http.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", tokenResponse.Token);
+            Navigation.NavigateTo("/customerlist");
+        }
+        else
+        {
+            errorMessage = "Login failed. Please check your credentials and try again.";
+            isErrorVisible = true;
+        }
+    }
+
+    private void HandleClose(bool isVisible)
+    {
+        isErrorVisible = isVisible;
+    }
+
+    public class User
+    {
+        public int Id { get; set; }
+        public string Username { get; set; }
+        public string Password { get; set; } 
+    }
+
+    public class TokenResponse
+    {
+        public string Token { get; set; }
+    }
+}
