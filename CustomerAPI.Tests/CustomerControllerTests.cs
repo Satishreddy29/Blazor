@@ -14,7 +14,7 @@ namespace CustomerAPI.Tests
     public class CustomerControllerTests : IClassFixture<WebApplicationFactory<Program>>
     {
         private readonly HttpClient _client;
-        private readonly DbContextOptions<CustomerContext> _options;
+        private DbContextOptions<CustomerContext> _options;
 
         public CustomerControllerTests(WebApplicationFactory<Program> factory)
         {
@@ -32,6 +32,9 @@ namespace CustomerAPI.Tests
         [Fact]
         public async Task GetCustomer_ExistingId_ReturnsOk()
         {
+            _options = new DbContextOptionsBuilder<CustomerContext>()
+                .UseInMemoryDatabase(databaseName: Guid.NewGuid().ToString()) // Unique DB for each test
+                .Options;
             // Arrange
             using (var context = new CustomerContext(_options))
             {
@@ -55,6 +58,9 @@ namespace CustomerAPI.Tests
         [Fact]
         public async Task DeleteCustomer_ExistingId_ReturnsDeletedCustomer()
         {
+            _options = new DbContextOptionsBuilder<CustomerContext>()
+                .UseInMemoryDatabase(databaseName: Guid.NewGuid().ToString()) // Unique DB for each test
+                .Options;
             // Arrange
             using (var context = new CustomerContext(_options))
             {
@@ -78,10 +84,14 @@ namespace CustomerAPI.Tests
         [Fact]
         public async Task PutCustomer_ExistingId_ReturnsNoContent()
         {
+            _options = new DbContextOptionsBuilder<CustomerContext>()
+                .UseInMemoryDatabase(databaseName: Guid.NewGuid().ToString()) // Unique DB for each test
+                .Options;
             // Arrange
             int customerId;
             using (var context = new CustomerContext(_options))
             {
+                
                 var customer = new Customer
                 {
                     Name = "John Doe",
@@ -96,7 +106,7 @@ namespace CustomerAPI.Tests
             var updatedCustomer = new Customer
             {
                 Id = customerId, // Use the captured ID
-                Name = "Jane Doe",
+                Name = "Jane Doe1",
                 Address = "456 Elm St",
                 Phone = "555-5678"
             };
@@ -112,6 +122,9 @@ namespace CustomerAPI.Tests
         [Fact]
         public async Task PostCustomer_ValidCustomer_ReturnsCreated()
         {
+            _options = new DbContextOptionsBuilder<CustomerContext>()
+                .UseInMemoryDatabase(databaseName: Guid.NewGuid().ToString()) // Unique DB for each test
+                .Options;
             // Arrange
             var newCustomer = new Customer
             {

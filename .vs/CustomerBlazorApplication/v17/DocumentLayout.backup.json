@@ -3,32 +3,44 @@
   "WorkspaceRootPath": "C:\\Users\\Satheesh\\source\\repos\\Blazor\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7E538F18-BE0F-4ACE-8FF5-803E41B3C907}|TrackingAPI\\TrackingAPI.csproj|c:\\users\\satheesh\\source\\repos\\blazor\\trackingapi\\model\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7E538F18-BE0F-4ACE-8FF5-803E41B3C907}|TrackingAPI\\TrackingAPI.csproj|solutionrelative:trackingapi\\model\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5EE6E070-C8DE-4148-BE69-C6DAA60BC817}|CustomerAPI.Tests\\CustomerAPI.Tests.csproj|c:\\users\\satheesh\\source\\repos\\blazor\\customerapi.tests\\customercontrollertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5EE6E070-C8DE-4148-BE69-C6DAA60BC817}|CustomerAPI.Tests\\CustomerAPI.Tests.csproj|solutionrelative:customerapi.tests\\customercontrollertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7E538F18-BE0F-4ACE-8FF5-803E41B3C907}|TrackingAPI\\TrackingAPI.csproj|c:\\users\\satheesh\\source\\repos\\blazor\\trackingapi\\services\\customerorderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7E538F18-BE0F-4ACE-8FF5-803E41B3C907}|TrackingAPI\\TrackingAPI.csproj|solutionrelative:trackingapi\\services\\customerorderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{320A6C62-604B-4F0F-B50D-4E62AC29A0F7}|OrdersAPI.Tests\\OrdersAPI.Tests.csproj|c:\\users\\satheesh\\source\\repos\\blazor\\ordersapi.tests\\orderscontrollertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{320A6C62-604B-4F0F-B50D-4E62AC29A0F7}|OrdersAPI.Tests\\OrdersAPI.Tests.csproj|solutionrelative:ordersapi.tests\\orderscontrollertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E8D638B4-77EF-44F5-B765-143775190D6F}|CustomerBlazorServerApp\\CustomerBlazorServerApp.csproj|c:\\users\\satheesh\\source\\repos\\blazor\\customerblazorserverapp\\pages\\customerlist.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E8D638B4-77EF-44F5-B765-143775190D6F}|CustomerBlazorServerApp\\CustomerBlazorServerApp.csproj|solutionrelative:customerblazorserverapp\\pages\\customerlist.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{234A2CED-9460-4725-A3BA-D8842A38A22C}|OrdersAPI\\OrdersAPI.csproj|c:\\users\\satheesh\\source\\repos\\blazor\\ordersapi\\controllers\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{234A2CED-9460-4725-A3BA-D8842A38A22C}|OrdersAPI\\OrdersAPI.csproj|solutionrelative:ordersapi\\controllers\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8D638B4-77EF-44F5-B765-143775190D6F}|CustomerBlazorServerApp\\CustomerBlazorServerApp.csproj|c:\\users\\satheesh\\source\\repos\\blazor\\customerblazorserverapp\\data\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E8D638B4-77EF-44F5-B765-143775190D6F}|CustomerBlazorServerApp\\CustomerBlazorServerApp.csproj|solutionrelative:customerblazorserverapp\\data\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E8D638B4-77EF-44F5-B765-143775190D6F}|CustomerBlazorServerApp\\CustomerBlazorServerApp.csproj|c:\\users\\satheesh\\source\\repos\\blazor\\customerblazorserverapp\\services\\customerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E8D638B4-77EF-44F5-B765-143775190D6F}|CustomerBlazorServerApp\\CustomerBlazorServerApp.csproj|solutionrelative:customerblazorserverapp\\services\\customerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{7E538F18-BE0F-4ACE-8FF5-803E41B3C907}|TrackingAPI\\TrackingAPI.csproj|c:\\users\\satheesh\\source\\repos\\blazor\\trackingapi\\services\\customerorderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7E538F18-BE0F-4ACE-8FF5-803E41B3C907}|TrackingAPI\\TrackingAPI.csproj|solutionrelative:trackingapi\\services\\customerorderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{7E538F18-BE0F-4ACE-8FF5-803E41B3C907}|TrackingAPI\\TrackingAPI.csproj|c:\\users\\satheesh\\source\\repos\\blazor\\trackingapi\\controllers\\trackingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7E538F18-BE0F-4ACE-8FF5-803E41B3C907}|TrackingAPI\\TrackingAPI.csproj|solutionrelative:trackingapi\\controllers\\trackingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C9CD9582-1D0E-480D-BE98-1CF2FCFDEFCE}|CustomerAPI\\CustomerAPI.csproj|c:\\users\\satheesh\\source\\repos\\blazor\\customerapi\\customer.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{C9CD9582-1D0E-480D-BE98-1CF2FCFDEFCE}|CustomerAPI\\CustomerAPI.csproj|solutionrelative:customerapi\\customer.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{E8D638B4-77EF-44F5-B765-143775190D6F}|CustomerBlazorServerApp\\CustomerBlazorServerApp.csproj|c:\\users\\satheesh\\source\\repos\\blazor\\customerblazorserverapp\\pages\\customerlist.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E8D638B4-77EF-44F5-B765-143775190D6F}|CustomerBlazorServerApp\\CustomerBlazorServerApp.csproj|solutionrelative:customerblazorserverapp\\pages\\customerlist.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E8D638B4-77EF-44F5-B765-143775190D6F}|CustomerBlazorServerApp\\CustomerBlazorServerApp.csproj|c:\\users\\satheesh\\source\\repos\\blazor\\customerblazorserverapp\\data\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E8D638B4-77EF-44F5-B765-143775190D6F}|CustomerBlazorServerApp\\CustomerBlazorServerApp.csproj|solutionrelative:customerblazorserverapp\\data\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7E538F18-BE0F-4ACE-8FF5-803E41B3C907}|TrackingAPI\\TrackingAPI.csproj|c:\\users\\satheesh\\source\\repos\\blazor\\trackingapi\\model\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7E538F18-BE0F-4ACE-8FF5-803E41B3C907}|TrackingAPI\\TrackingAPI.csproj|solutionrelative:trackingapi\\model\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C9CD9582-1D0E-480D-BE98-1CF2FCFDEFCE}|CustomerAPI\\CustomerAPI.csproj|c:\\users\\satheesh\\source\\repos\\blazor\\customerapi\\customer.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{C9CD9582-1D0E-480D-BE98-1CF2FCFDEFCE}|CustomerAPI\\CustomerAPI.csproj|solutionrelative:customerapi\\customer.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E8D638B4-77EF-44F5-B765-143775190D6F}|CustomerBlazorServerApp\\CustomerBlazorServerApp.csproj|c:\\users\\satheesh\\source\\repos\\blazor\\customerblazorserverapp\\data\\customerorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -55,10 +67,6 @@
       "RelativeMoniker": "D:0:0:{7E538F18-BE0F-4ACE-8FF5-803E41B3C907}|TrackingAPI\\TrackingAPI.csproj|solutionrelative:trackingapi\\model\\tracking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{234A2CED-9460-4725-A3BA-D8842A38A22C}|OrdersAPI\\OrdersAPI.csproj|c:\\users\\satheesh\\source\\repos\\blazor\\ordersapi\\controllers\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{234A2CED-9460-4725-A3BA-D8842A38A22C}|OrdersAPI\\OrdersAPI.csproj|solutionrelative:ordersapi\\controllers\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{E8D638B4-77EF-44F5-B765-143775190D6F}|CustomerBlazorServerApp\\CustomerBlazorServerApp.csproj|c:\\users\\satheesh\\source\\repos\\blazor\\customerblazorserverapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E8D638B4-77EF-44F5-B765-143775190D6F}|CustomerBlazorServerApp\\CustomerBlazorServerApp.csproj|solutionrelative:customerblazorserverapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -83,8 +91,8 @@
       "RelativeMoniker": "D:0:0:{C9CD9582-1D0E-480D-BE98-1CF2FCFDEFCE}|CustomerAPI\\CustomerAPI.csproj|solutionrelative:customerapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{234A2CED-9460-4725-A3BA-D8842A38A22C}|OrdersAPI\\OrdersAPI.csproj|c:\\users\\satheesh\\source\\repos\\blazor\\ordersapi\\helpers\\orderjsonhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{234A2CED-9460-4725-A3BA-D8842A38A22C}|OrdersAPI\\OrdersAPI.csproj|solutionrelative:ordersapi\\helpers\\orderjsonhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Satheesh\\source\\repos\\Blazor\\OrdersAPI\\Helpers\\OrderJsonHelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:OrdersAPI\\Helpers\\OrderJsonHelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -94,23 +102,37 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "CustomerList.razor",
-              "DocumentMoniker": "C:\\Users\\Satheesh\\source\\repos\\Blazor\\CustomerBlazorServerApp\\Pages\\CustomerList.razor",
-              "RelativeDocumentMoniker": "CustomerBlazorServerApp\\Pages\\CustomerList.razor",
-              "ToolTip": "C:\\Users\\Satheesh\\source\\repos\\Blazor\\CustomerBlazorServerApp\\Pages\\CustomerList.razor",
-              "RelativeToolTip": "CustomerBlazorServerApp\\Pages\\CustomerList.razor",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAAAC8AAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-09-18T18:09:13.544Z"
+              "DocumentIndex": 0,
+              "Title": "CustomerControllerTests.cs",
+              "DocumentMoniker": "C:\\Users\\Satheesh\\source\\repos\\Blazor\\CustomerAPI.Tests\\CustomerControllerTests.cs",
+              "RelativeDocumentMoniker": "CustomerAPI.Tests\\CustomerControllerTests.cs",
+              "ToolTip": "C:\\Users\\Satheesh\\source\\repos\\Blazor\\CustomerAPI.Tests\\CustomerControllerTests.cs",
+              "RelativeToolTip": "CustomerAPI.Tests\\CustomerControllerTests.cs",
+              "ViewState": "AgIAAIEAAAAAAAAAAAAowH4AAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-25T17:09:16.161Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
+              "Title": "OrdersControllerTests.cs",
+              "DocumentMoniker": "C:\\Users\\Satheesh\\source\\repos\\Blazor\\OrdersAPI.Tests\\OrdersControllerTests.cs",
+              "RelativeDocumentMoniker": "OrdersAPI.Tests\\OrdersControllerTests.cs",
+              "ToolTip": "C:\\Users\\Satheesh\\source\\repos\\Blazor\\OrdersAPI.Tests\\OrdersControllerTests.cs",
+              "RelativeToolTip": "OrdersAPI.Tests\\OrdersControllerTests.cs",
+              "ViewState": "AgIAALEAAAAAAAAAAAAAAMwAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-25T17:03:28.154Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "CustomerService.cs",
               "DocumentMoniker": "C:\\Users\\Satheesh\\source\\repos\\Blazor\\CustomerBlazorServerApp\\Services\\CustomerService.cs",
               "RelativeDocumentMoniker": "CustomerBlazorServerApp\\Services\\CustomerService.cs",
@@ -118,11 +140,12 @@
               "RelativeToolTip": "CustomerBlazorServerApp\\Services\\CustomerService.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAD4vwoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-18T17:53:08.19Z"
+              "WhenOpened": "2024-09-18T17:53:08.19Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "CustomerOrderService.cs",
               "DocumentMoniker": "C:\\Users\\Satheesh\\source\\repos\\Blazor\\TrackingAPI\\Services\\CustomerOrderService.cs",
               "RelativeDocumentMoniker": "TrackingAPI\\Services\\CustomerOrderService.cs",
@@ -130,11 +153,12 @@
               "RelativeToolTip": "TrackingAPI\\Services\\CustomerOrderService.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAApwBQAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-18T17:55:19.984Z"
+              "WhenOpened": "2024-09-18T17:55:19.984Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 10,
               "Title": "CustomerOrder.cs",
               "DocumentMoniker": "C:\\Users\\Satheesh\\source\\repos\\Blazor\\CustomerBlazorServerApp\\Data\\CustomerOrder.cs",
               "RelativeDocumentMoniker": "CustomerBlazorServerApp\\Data\\CustomerOrder.cs",
@@ -146,7 +170,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 3,
               "Title": "Order.cs",
               "DocumentMoniker": "C:\\Users\\Satheesh\\source\\repos\\Blazor\\CustomerBlazorServerApp\\Data\\Order.cs",
               "RelativeDocumentMoniker": "CustomerBlazorServerApp\\Data\\Order.cs",
@@ -154,23 +178,51 @@
               "RelativeToolTip": "CustomerBlazorServerApp\\Data\\Order.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-18T18:07:48.138Z"
+              "WhenOpened": "2024-09-18T18:07:48.138Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
+              "Title": "OrdersController.cs",
+              "DocumentMoniker": "C:\\Users\\Satheesh\\source\\repos\\Blazor\\OrdersAPI\\Controllers\\OrdersController.cs",
+              "RelativeDocumentMoniker": "OrdersAPI\\Controllers\\OrdersController.cs",
+              "ToolTip": "C:\\Users\\Satheesh\\source\\repos\\Blazor\\OrdersAPI\\Controllers\\OrdersController.cs",
+              "RelativeToolTip": "OrdersAPI\\Controllers\\OrdersController.cs",
+              "ViewState": "AgIAAFwAAAAAAAAAAAAswAsAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-18T17:43:51.305Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "CustomerList.razor",
+              "DocumentMoniker": "C:\\Users\\Satheesh\\source\\repos\\Blazor\\CustomerBlazorServerApp\\Pages\\CustomerList.razor",
+              "RelativeDocumentMoniker": "CustomerBlazorServerApp\\Pages\\CustomerList.razor",
+              "ToolTip": "C:\\Users\\Satheesh\\source\\repos\\Blazor\\CustomerBlazorServerApp\\Pages\\CustomerList.razor",
+              "RelativeToolTip": "CustomerBlazorServerApp\\Pages\\CustomerList.razor",
+              "ViewState": "AgIAACcAAAAAAAAAAAD4vzQAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-18T18:09:13.544Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "TrackingController.cs",
               "DocumentMoniker": "C:\\Users\\Satheesh\\source\\repos\\Blazor\\TrackingAPI\\Controllers\\TrackingController.cs",
               "RelativeDocumentMoniker": "TrackingAPI\\Controllers\\TrackingController.cs",
               "ToolTip": "C:\\Users\\Satheesh\\source\\repos\\Blazor\\TrackingAPI\\Controllers\\TrackingController.cs",
               "RelativeToolTip": "TrackingAPI\\Controllers\\TrackingController.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAAABcAAAAQAAAAAAAAAA==",
+              "ViewState": "AgIAAAoAAAAAAAAAAAD4vxEAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-18T17:52:48.818Z"
+              "WhenOpened": "2024-09-18T17:52:48.818Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 9,
               "Title": "customer.json",
               "DocumentMoniker": "C:\\Users\\Satheesh\\source\\repos\\Blazor\\CustomerAPI\\customer.json",
               "RelativeDocumentMoniker": "CustomerAPI\\customer.json",
@@ -182,7 +234,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 8,
               "Title": "Order.cs",
               "DocumentMoniker": "C:\\Users\\Satheesh\\source\\repos\\Blazor\\TrackingAPI\\Model\\Order.cs",
               "RelativeDocumentMoniker": "TrackingAPI\\Model\\Order.cs",
@@ -190,12 +242,11 @@
               "RelativeToolTip": "TrackingAPI\\Model\\Order.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAuwAoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-18T18:01:58.298Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-18T18:01:58.298Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 11,
               "Title": "Customer.cs",
               "DocumentMoniker": "C:\\Users\\Satheesh\\source\\repos\\Blazor\\CustomerBlazorServerApp\\Data\\Customer.cs",
               "RelativeDocumentMoniker": "CustomerBlazorServerApp\\Data\\Customer.cs",
@@ -207,7 +258,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 15,
               "Title": "Tracking.cs",
               "DocumentMoniker": "C:\\Users\\Satheesh\\source\\repos\\Blazor\\TrackingAPI\\Model\\Tracking.cs",
               "RelativeDocumentMoniker": "TrackingAPI\\Model\\Tracking.cs",
@@ -219,7 +270,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 13,
               "Title": "CustomerController.cs",
               "DocumentMoniker": "C:\\Users\\Satheesh\\source\\repos\\Blazor\\CustomerAPI\\Controllers\\CustomerController.cs",
               "RelativeDocumentMoniker": "CustomerAPI\\Controllers\\CustomerController.cs",
@@ -231,7 +282,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 12,
               "Title": "NavMenu.razor",
               "DocumentMoniker": "C:\\Users\\Satheesh\\source\\repos\\Blazor\\CustomerBlazorServerApp\\Shared\\NavMenu.razor",
               "RelativeDocumentMoniker": "CustomerBlazorServerApp\\Shared\\NavMenu.razor",
@@ -243,7 +294,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 14,
               "Title": "Customer.cs",
               "DocumentMoniker": "C:\\Users\\Satheesh\\source\\repos\\Blazor\\CustomerAPI\\Models\\Customer.cs",
               "RelativeDocumentMoniker": "CustomerAPI\\Models\\Customer.cs",
@@ -255,19 +306,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "OrdersController.cs",
-              "DocumentMoniker": "C:\\Users\\Satheesh\\source\\repos\\Blazor\\OrdersAPI\\Controllers\\OrdersController.cs",
-              "RelativeDocumentMoniker": "OrdersAPI\\Controllers\\OrdersController.cs",
-              "ToolTip": "C:\\Users\\Satheesh\\source\\repos\\Blazor\\OrdersAPI\\Controllers\\OrdersController.cs",
-              "RelativeToolTip": "OrdersAPI\\Controllers\\OrdersController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-18T17:43:51.305Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 16,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Satheesh\\source\\repos\\Blazor\\CustomerBlazorServerApp\\Program.cs",
               "RelativeDocumentMoniker": "CustomerBlazorServerApp\\Program.cs",
@@ -279,7 +318,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 17,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Satheesh\\source\\repos\\Blazor\\TrackingAPI\\Program.cs",
               "RelativeDocumentMoniker": "TrackingAPI\\Program.cs",
@@ -291,7 +330,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 18,
               "Title": "launchSettings.json",
               "DocumentMoniker": "C:\\Users\\Satheesh\\source\\repos\\Blazor\\TrackingAPI\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "TrackingAPI\\Properties\\launchSettings.json",
@@ -303,7 +342,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 19,
               "Title": "launchSettings.json",
               "DocumentMoniker": "C:\\Users\\Satheesh\\source\\repos\\Blazor\\OrdersAPI\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "OrdersAPI\\Properties\\launchSettings.json",
@@ -315,7 +354,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 20,
               "Title": "launchSettings.json",
               "DocumentMoniker": "C:\\Users\\Satheesh\\source\\repos\\Blazor\\CustomerAPI\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "CustomerAPI\\Properties\\launchSettings.json",
@@ -327,7 +366,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 22,
               "Title": "OrderJsonHelper.cs",
               "DocumentMoniker": "C:\\Users\\Satheesh\\source\\repos\\Blazor\\OrdersAPI\\Helpers\\OrderJsonHelper.cs",
               "RelativeDocumentMoniker": "OrdersAPI\\Helpers\\OrderJsonHelper.cs",
@@ -339,7 +378,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 21,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Satheesh\\source\\repos\\Blazor\\CustomerAPI\\Program.cs",
               "RelativeDocumentMoniker": "CustomerAPI\\Program.cs",

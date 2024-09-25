@@ -53,3 +53,5 @@ node_modules/
 
 # Tooling
 *.cache
+*.dll
+.vs/

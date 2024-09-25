@@ -3,13 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35303.130
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomerBlazorServerApp", "CustomerBlazorServerApp\CustomerBlazorServerApp.csproj", "{E8D638B4-77EF-44F5-B765-143775190D6F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CustomerBlazorServerApp", "CustomerBlazorServerApp\CustomerBlazorServerApp.csproj", "{E8D638B4-77EF-44F5-B765-143775190D6F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomerAPI", "CustomerAPI\CustomerAPI.csproj", "{C9CD9582-1D0E-480D-BE98-1CF2FCFDEFCE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CustomerAPI", "CustomerAPI\CustomerAPI.csproj", "{C9CD9582-1D0E-480D-BE98-1CF2FCFDEFCE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrdersAPI", "OrdersAPI\OrdersAPI.csproj", "{234A2CED-9460-4725-A3BA-D8842A38A22C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OrdersAPI", "OrdersAPI\OrdersAPI.csproj", "{234A2CED-9460-4725-A3BA-D8842A38A22C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrackingAPI", "TrackingAPI\TrackingAPI.csproj", "{7E538F18-BE0F-4ACE-8FF5-803E41B3C907}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TrackingAPI", "TrackingAPI\TrackingAPI.csproj", "{7E538F18-BE0F-4ACE-8FF5-803E41B3C907}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OrdersAPI.Tests", "OrdersAPI.Tests\OrdersAPI.Tests.csproj", "{320A6C62-604B-4F0F-B50D-4E62AC29A0F7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CustomerAPI.Tests", "CustomerAPI.Tests\CustomerAPI.Tests.csproj", "{5EE6E070-C8DE-4148-BE69-C6DAA60BC817}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +37,14 @@ Global
 		{7E538F18-BE0F-4ACE-8FF5-803E41B3C907}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7E538F18-BE0F-4ACE-8FF5-803E41B3C907}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7E538F18-BE0F-4ACE-8FF5-803E41B3C907}.Release|Any CPU.Build.0 = Release|Any CPU
+		{320A6C62-604B-4F0F-B50D-4E62AC29A0F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{320A6C62-604B-4F0F-B50D-4E62AC29A0F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{320A6C62-604B-4F0F-B50D-4E62AC29A0F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{320A6C62-604B-4F0F-B50D-4E62AC29A0F7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5EE6E070-C8DE-4148-BE69-C6DAA60BC817}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5EE6E070-C8DE-4148-BE69-C6DAA60BC817}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5EE6E070-C8DE-4148-BE69-C6DAA60BC817}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5EE6E070-C8DE-4148-BE69-C6DAA60BC817}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
