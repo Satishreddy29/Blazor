@@ -7,56 +7,76 @@ using System.Text;
 using CustomerBlazorAuthApi.Models;
 using CustomerBlazorAuthApi.Data;
 
-[Route("api/[controller]")]
-[ApiController]
-public class AuthController : ControllerBase
+namespace CustomerBlazorAuthApi.Controllers
 {
-    private readonly ApplicationDbContext _context;
-    private readonly IConfiguration _configuration;
-    private readonly ILogger<AuthController> _logger;
-
-    public AuthController(ApplicationDbContext context, IConfiguration configuration,ILogger<AuthController> logger)
+    [Route("api/[controller]")]
+    [ApiController]
+    public class AuthController : ControllerBase
     {
-        _context = context;
-        _configuration = configuration;
-        _logger = logger;
-    }
+        private readonly ApplicationDbContext _context;
+        private readonly IConfiguration _configuration;
+        private readonly ILogger<AuthController> _logger;
 
-    [HttpPost("login")]
-    public IActionResult Login([FromBody] User user)
-    {
-        _logger.LogInformation("AuthController: Calling Method Login,Username : "+user.Username);
-        if (user == null)
-        return BadRequest(new { message = "User data is required" });
-
-        var dbUser = _context.Users.FirstOrDefault(u => u.Username == user.Username && u.Password == user.Password);
-        
-        if (dbUser == null)
+        public AuthController(ApplicationDbContext context, IConfiguration configuration,ILogger<AuthController> logger)
         {
-            return Unauthorized(new { message = "Invalid credentials" }); // Ensure this is a JSON response
+            _context = context;
+            _configuration = configuration;
+            _logger = logger;
         }
 
-        var claims = new[]
+        [HttpPost("login")]
+        public IActionResult Login([FromBody] User user)
         {
-            new Claim(ClaimTypes.Name, dbUser.Username)
-        };
-        
-        var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["JwtSettings:Key"]));
-        var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
-        var token = new JwtSecurityToken(
-            claims: claims,
-            expires: DateTime.Now.AddMinutes(30),
-            signingCredentials: creds);
+            _logger.LogInformation("AuthController: Calling Method Login,Username : "+user.Username);
+            // Check if user is null
+            if (user == null)
+            {
+                return BadRequest("User data is required.");
+            }
 
-        return Ok(new { token = new JwtSecurityTokenHandler().WriteToken(token) });
-    }
+            // Check for null or empty username/password
+            if (string.IsNullOrEmpty(user.Username) || string.IsNullOrEmpty(user.Password))
+            {
+                return BadRequest("Username and password cannot be empty.");
+            }
 
-    [HttpPost("register")]
-    public IActionResult Register([FromBody] User user)
-    {
-        _logger.LogInformation("AuthController: Calling Method Register,Username : "+user.Username);
-        _context.Users.Add(user);
-        _context.SaveChanges();
-        return Ok();
+            var existingUser = _context.Users.SingleOrDefault(u => u.Username == user.Username);
+            if (existingUser == null || existingUser.Password != user.Password) // Ensure to use proper hashing in production
+            {
+                return Unauthorized();
+            }
+            System.IdentityModel.Tokens.Jwt.JwtSecurityToken token;
+            try
+            {
+                var claims = new[]
+                {
+                    new Claim(ClaimTypes.Name, existingUser.Username)
+                };
+                
+                var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["JwtSettings:Key"]));
+                var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
+                token = new JwtSecurityToken(
+                    claims: claims,
+                    expires: DateTime.Now.AddMinutes(30),
+                    signingCredentials: creds);
+
+             }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error generating token.");
+                return StatusCode(500, "Internal server error.");
+            }
+
+            return Ok(new { token = new JwtSecurityTokenHandler().WriteToken(token) });
+        }
+
+        [HttpPost("register")]
+        public IActionResult Register([FromBody] User user)
+        {
+            _logger.LogInformation("AuthController: Calling Method Register,Username : "+user.Username);
+            _context.Users.Add(user);
+            _context.SaveChanges();
+            return Ok();
+        }
     }
 }
