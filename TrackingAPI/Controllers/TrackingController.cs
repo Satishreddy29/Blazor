@@ -8,10 +8,10 @@ namespace TrackingApi.Controllers
     [ApiController]
     public class TrackingController : ControllerBase
     {
-        private readonly CustomerOrderService _customerOrderService;
+        private readonly ICustomerOrderService  _customerOrderService;
         private readonly ILogger<TrackingController> _logger;
 
-        public TrackingController(CustomerOrderService customerOrderService, ILogger<TrackingController> logger)
+        public TrackingController(ICustomerOrderService  customerOrderService, ILogger<TrackingController> logger)
         {
             _customerOrderService = customerOrderService;
             _logger = logger;

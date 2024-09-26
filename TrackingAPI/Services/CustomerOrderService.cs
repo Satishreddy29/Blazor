@@ -1,24 +1,24 @@
-﻿using TrackingApi.Model;
-using Microsoft.Extensions.Configuration;
+﻿using System;
+using System.Collections.Generic;
 using System.Net.Http;
 using System.Net.Http.Json;
 using System.Threading.Tasks;
-using System.Collections.Generic;
-using System.Linq;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
+using TrackingApi.Model;
 
 namespace TrackingApi.Services
 {
-    public class CustomerOrderService
+    public class CustomerOrderService : ICustomerOrderService
     {
-        private readonly HttpClient httpClient;
-        private readonly IConfiguration configuration;
+        private readonly HttpClient _httpClient;
+        private readonly IConfiguration _configuration;
         private readonly ILogger<CustomerOrderService> _logger;
 
         public CustomerOrderService(HttpClient httpClient, IConfiguration configuration, ILogger<CustomerOrderService> logger)
         {
-            this.httpClient = httpClient;
-            this.configuration = configuration;
+            _httpClient = httpClient;
+            _configuration = configuration;
             _logger = logger;
         }
 
@@ -26,56 +26,56 @@ namespace TrackingApi.Services
         public async Task<Tracking> GetAllCustomerData()
         {
             _logger.LogInformation("CustomerOrderService: Calling Method GetAllCustomerData");
-            var customerApiUrl = configuration["ApiSettings:CustomerApiUrl"];
-            var orderApiUrl = configuration["ApiSettings:OrderApiUrl"];
+            var customerApiUrl = _configuration["ApiSettings:CustomerApiUrl"];
+            var orderApiUrl = _configuration["ApiSettings:OrderApiUrl"];
 
             try
             {
-                var custresult = await httpClient.GetFromJsonAsync<IEnumerable<Customer>>(customerApiUrl);
-                var productresult = await httpClient.GetFromJsonAsync<IEnumerable<Product>>(orderApiUrl);
+                var custResult = await _httpClient.GetFromJsonAsync<IEnumerable<Customer>>(customerApiUrl);
+                var productResult = await _httpClient.GetFromJsonAsync<IEnumerable<Product>>(orderApiUrl);
 
-                if (custresult == null || productresult == null)
+                if (custResult == null || productResult == null)
                 {
                     return new Tracking(); // Return empty if any data set is null
                 }
 
                 // Joining customer and product data
-                var joinedData = from customer in custresult
-                                 join status in productresult on customer.Id equals status.CustomerId into statusGroup
-                                 from status in statusGroup.DefaultIfEmpty()
+                var joinedData = from customer in custResult
+                                 join product in productResult on customer.Id equals product.CustomerId into productGroup
+                                 from product in productGroup.DefaultIfEmpty()
                                  select new Customer
                                  {
                                      Id = customer.Id,
                                      Name = customer.Name,
                                      Phone = customer.Phone,
                                      Address = customer.Address,
-                                     ProductName = string.IsNullOrEmpty(status?.Name) ? "---" : status.Name,
-                                     TrackingId = string.IsNullOrEmpty(status?.TrackingId) ? "---" : status.TrackingId,
-                                     TrackingStatus = string.IsNullOrEmpty(status?.TrackingStatus) ? "No Order" : status.TrackingStatus
+                                     ProductName = product?.Name ?? "---",
+                                     TrackingId = product?.TrackingId ?? "---",
+                                     TrackingStatus = product?.TrackingStatus ?? "No Order"
                                  };
 
                 return new Tracking
                 {
                     customers = joinedData.ToList(),
-                    products = productresult.ToList()
+                    products = productResult.ToList()
                 };
             }
             catch (Exception ex)
             {
                 _logger.LogError($"Error in GetAllCustomerData: {ex.Message}");
-                throw; // Optionally, rethrow the exception or handle it gracefully
+                throw; // Rethrow exception for higher-level handling
             }
         }
 
         // Method to add new customer data
         public async Task AddCustomerDataAsync(Customer customer)
         {
-            _logger.LogInformation("CustomerOrderService: Calling Method AddCustomerDataAsync, Customer Name: " + customer.Name);
-            var customerApiUrl = configuration["ApiSettings:CustomerApiUrl"];
+            _logger.LogInformation("CustomerOrderService: Calling Method AddCustomerDataAsync, Customer Name: {Name}", customer.Name);
+            var customerApiUrl = _configuration["ApiSettings:CustomerApiUrl"];
 
             try
             {
-                var response = await httpClient.PostAsJsonAsync(customerApiUrl, customer);
+                var response = await _httpClient.PostAsJsonAsync(customerApiUrl, customer);
                 response.EnsureSuccessStatusCode();
             }
             catch (Exception ex)
@@ -88,12 +88,12 @@ namespace TrackingApi.Services
         // Method to get customer by ID
         public async Task<Customer> GetCustomerByIdAsync(int id)
         {
-            _logger.LogInformation($"CustomerOrderService: Fetching customer with ID: {id}");
-            var customerApiUrl = $"{configuration["ApiSettings:CustomerApiUrl"]}/{id}";
+            _logger.LogInformation("CustomerOrderService: Fetching customer with ID: {Id}", id);
+            var customerApiUrl = $"{_configuration["ApiSettings:CustomerApiUrl"]}/{id}";
 
             try
             {
-                var customer = await httpClient.GetFromJsonAsync<Customer>(customerApiUrl);
+                var customer = await _httpClient.GetFromJsonAsync<Customer>(customerApiUrl);
                 return customer ?? throw new KeyNotFoundException($"Customer with ID {id} not found.");
             }
             catch (Exception ex)
@@ -106,12 +106,12 @@ namespace TrackingApi.Services
         // Method to update existing customer data
         public async Task UpdateCustomerAsync(Customer customer)
         {
-            _logger.LogInformation($"CustomerOrderService: Updating customer with ID: {customer.Id}");
-            var customerApiUrl = $"{configuration["ApiSettings:CustomerApiUrl"]}/{customer.Id}";
+            _logger.LogInformation("CustomerOrderService: Updating customer with ID: {Id}", customer.Id);
+            var customerApiUrl = $"{_configuration["ApiSettings:CustomerApiUrl"]}/{customer.Id}";
 
             try
             {
-                var response = await httpClient.PutAsJsonAsync(customerApiUrl, customer);
+                var response = await _httpClient.PutAsJsonAsync(customerApiUrl, customer);
                 response.EnsureSuccessStatusCode();
             }
             catch (Exception ex)
@@ -124,12 +124,12 @@ namespace TrackingApi.Services
         // Method to delete customer by ID
         public async Task DeleteCustomerAsync(int id)
         {
-            _logger.LogInformation($"CustomerOrderService: Deleting customer with ID: {id}");
-            var customerApiUrl = $"{configuration["ApiSettings:CustomerApiUrl"]}/{id}";
+            _logger.LogInformation("CustomerOrderService: Deleting customer with ID: {Id}", id);
+            var customerApiUrl = $"{_configuration["ApiSettings:CustomerApiUrl"]}/{id}";
 
             try
             {
-                var response = await httpClient.DeleteAsync(customerApiUrl);
+                var response = await _httpClient.DeleteAsync(customerApiUrl);
                 response.EnsureSuccessStatusCode();
             }
             catch (Exception ex)
